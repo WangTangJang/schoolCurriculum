@@ -1,6 +1,4 @@
 package com.easyBuy.mybatisWithSpring.servlet;
-
-
 import com.easyBuy.mybatisWithSpring.service.EasyBuyUserService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
