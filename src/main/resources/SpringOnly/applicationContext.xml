@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.2.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+<!--&lt;!&ndash;    通过get set 方法注入&ndash;&gt;-->
+<!--    <bean id="helloSpring" class="com.easyBuy.spring.demo.HelloSpring">-->
+<!--        <property name="name" value="李四"/>-->
+<!--        <property name="age" value="23"/>-->
+<!--        <property name="height" value="180"/>-->
+<!--&lt;!&ndash;       集合注入&ndash;&gt;-->
+<!--        <property name="list">-->
+<!--            <list>-->
+<!--                <value>List中国</value>-->
+<!--                <value>List美国</value>-->
+<!--                <value>List日本</value>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--        <property name="map">-->
+<!--            <map>-->
+<!--                <entry key="map1Key" value="Map1Value"/>-->
+<!--                <entry key="map2Key" value="Map2Value"/>-->
+<!--                <entry key="map3Key" value="Map3Value"/>-->
+<!--            </map>-->
+<!--        </property>-->
+<!--    </bean>-->
+<!--&lt;!&ndash;    通过构造器注入&ndash;&gt;-->
+<!--    <bean id="spring_constructor" class="com.easyBuy.spring.demo.HelloSpring">-->
+<!--        <constructor-arg value="苏武"/>-->
+<!--        <constructor-arg value="39"/>-->
+<!--        <constructor-arg value="179.0"/>-->
+<!--        <constructor-arg value="120.10"/>-->
+<!--        <constructor-arg>-->
+<!--            <list>-->
+<!--                <value>List中国</value>-->
+<!--                <value>List美国</value>-->
+<!--                <value>List日本</value>-->
+<!--            </list>-->
+<!--        </constructor-arg>-->
+<!--        <constructor-arg>-->
+<!--            <map>-->
+<!--                <entry key="map1Key" value="Map1Value"/>-->
+<!--                <entry key="map2Key" value="Map2Value"/>-->
+<!--                <entry key="map3Key" value="Map3Value"/>-->
+<!--            </map>-->
+<!--        </constructor-arg>-->
+<!--    </bean>-->
+<!--    <bean id="helloSpring3" class="com.easyBuy.spring.demo.HelloSpring" p:age="26" p:price="32.33" p:name="马七" p:height="189">-->
+<!--        <property name="list">-->
+<!--            <list>-->
+<!--                <value>中国</value>-->
+<!--                <value>美国</value>-->
+<!--                <value>英国</value>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--        <property name="map">-->
+<!--            <map>-->
+<!--                <entry key="CN" value="中国"/>-->
+<!--                <entry key="UK" value="英国"/>-->
+<!--                <entry key="USA" value="美国"/>-->
+<!--            </map>-->
+<!--        </property>-->
+<!--    </bean>-->
+    <context:component-scan base-package="com.easyBuy.spring"/>
+
+</beans>

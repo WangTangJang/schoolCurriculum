@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--MyBatis主配置文件-->
+
+<configuration>
+    <!--加载数据库连接信息-->
+    <properties resource="database.properties"/>
+
+    <!-- 配置mybatis的log实现为LOG4J(可以在控制台下输出日志信息) -->
+    <settings>
+        <setting name="logImpl" value="LOG4J" />
+    </settings>
+
+<environments default="default">
+    <environment id="default">
+        <transactionManager type="JDBC"/>
+        <!--type:
+           POOLED mybatis自带的连接池
+           UNPOOLED 不使用连接池连接数据库
+           JNDI Tomcat下配置的连接池
+        -->
+        <dataSource type="POOLED">
+            <property name="driver" value="${driver}"/>
+            <property name="url" value="${url}"/>
+            <property name="username" value="${user}"/>
+            <property name="password" value="${password}"/>
+        </dataSource>
+    </environment>
+</environments>
+
+<!--配置映射信息-->
+    <mappers>
+        <mapper resource="com/easybuy/mapper/EasyBuyUserMapper.xml"/>
+    </mappers>
+
+
+</configuration>

@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="MybatisAndSpring">
+    <output-path>$PROJECT_DIR$/out/artifacts/MybatisAndSpring</output-path>
+    <root id="archive" name="MybatisAndSpring.war">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="schoolCurriculum" />
+          <element id="module-source" name="schoolCurriculum" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="lib" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="schoolCurriculum/web/Web" />
+    </root>
+  </artifact>
+</component>
