@@ -11,16 +11,11 @@
     <title>Title</title>
 </head>
 <body>
-<form method="post" action="doLogin5">
+<form method="post" action="doLogin2">
     名称：<input type="text" name="loginName"/><br/>
     密码：<input type="password" name="password"/><br/>
     <input type="submit" value="登录"/>
 </form>
-<form method="post" action="doLogin6">
-    名称：<input type="text" name="loginName"/><br/>
-    密码：<input type="password" name="password"/><br/>
-    <input type="submit" value="登录"/>
-</form>
-
+<div style="color:red">${MSG}</div>
 </body>
 </html>

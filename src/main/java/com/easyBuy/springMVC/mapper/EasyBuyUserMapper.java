@@ -1,6 +1,6 @@
 package com.easyBuy.springMVC.mapper;
 
-import com.easyBuy.mybatis.pojo.EasyBuyUser;
+import com.easyBuy.springMVC.pojo.EasyBuyUser;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -12,61 +12,80 @@ public interface EasyBuyUserMapper {
 
     /**
      * 统计用户数量
-     * @return 用户数
+     * @return
      */
-    public int count();
+    public int count()throws Exception;
+
+    /**
+     * 查询所有的用户信息
+     * @return
+     * @throws Exception
+     */
+    public List<EasyBuyUser> findAll()throws Exception;
 
 
     /**
-     * 返回所有的用户信息
-     * @return 查询的用户信息
-     * @throws Exception 异常
+     * 用户登录
+     * @param loginName
+     * @param password
+     * @return
+     * @throws Exception
      */
-    public List<EasyBuyUser> findAll()throws  Exception;
+    public EasyBuyUser login(@Param("loginName") String loginName, @Param("password") String password)throws Exception;
+
+
 
     /**
-     * 根据ID查询用户信息
+     * 根据用户ID查询用户信息
+     * @param id
+     * @return
+     * @throws Exception
      */
     public EasyBuyUser findUserById(Integer id)throws Exception;
 
     /**
-     * 保存
-     * @param easyBuyUser 一个实体类
-     * @throws Exception 异常
+     * 添加用户
+     * @param easyBuyUser
+     * @throws Exception
      */
     public void save(EasyBuyUser easyBuyUser)throws Exception;
 
     /**
-     * 修改
+     * 修改用户
+     * @param easyBuyUser
+     * @throws Exception
      */
     public void modify(EasyBuyUser easyBuyUser)throws Exception;
 
     /**
-     * 删除
+     * 删除用户
+     * @param id
+     * @throws Exception
      */
     public void delete(Integer id)throws Exception;
 
     /**
-     * 根据用户条件查询用户信息
+     * 根据条件查询用户信息
+     * @return
+     * @throws Exception
      */
-    public List<EasyBuyUser> findUserByWhere(EasyBuyUser easyBuyUser);
+    public List<EasyBuyUser> findByWhere(EasyBuyUser easyBuyUser) throws Exception;
 
     /**
-     * 模糊查询
+     * 根据条件查询用户信息
+     * @return
+     * @throws Exception
      */
-    public List<EasyBuyUser> findUserByLike(EasyBuyUser easyBuyUser);
+    public List<EasyBuyUser> findByWhere2(EasyBuyUser easyBuyUser) throws Exception;
 
-    /**
-     * 通过trim修改
-     */
-    public int modifyByTrim(EasyBuyUser easyBuyUser);
+    public void modify2(EasyBuyUser easyBuyUser)throws Exception;
 
-    /**
-     * 分页查找
-     */
-    public List<EasyBuyUser> findUserByLimit(
-            @Param("start") int start,
-            @Param("end") int end
-    );
+    public void modify3(EasyBuyUser easyBuyUser)throws Exception;
+
+    public List<EasyBuyUser> findByWhere3(EasyBuyUser easyBuyUser) throws Exception;
+
+
+    public List<EasyBuyUser> findByWhere4(@Param("start") int start, @Param("rows") int rows) throws Exception;
+
 }
 
