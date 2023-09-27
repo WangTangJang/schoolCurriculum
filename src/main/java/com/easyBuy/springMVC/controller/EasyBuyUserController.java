@@ -53,10 +53,9 @@ public class EasyBuyUserController {
     @RequestMapping(value = "/doLogin6/{loginName}/{password}")
     public String doLogin6(@PathVariable("loginName") String loginName, @PathVariable("password") String password)
     {
-        System.out.println("------------------doLogin6---------------");
+        System.out.println("------------------这是doLogin6---------------");
         System.out.println("loginName:"+loginName);
         System.out.println("password:"+password);
         return "hello";
     }
-
 }

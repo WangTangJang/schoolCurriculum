@@ -19,7 +19,7 @@ public class EasyBuyUserServlet extends HttpServlet {
 
     @Override
     public void init(ServletConfig config) throws ServletException {
-        ApplicationContext ap=new ClassPathXmlApplicationContext("/applicationContext.xml");
+        ApplicationContext ap=new ClassPathXmlApplicationContext("/MybatisWithSpring/applicationContext.xml");
         easyBuyUserService=(EasyBuyUserService)ap.getBean("easyBuyUserServiceImpl");
     }
 

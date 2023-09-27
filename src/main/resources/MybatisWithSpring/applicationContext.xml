@@ -16,7 +16,7 @@
         <property name="configLocation" value="../mybatisConfig.xml"/>
         <property name="mapperLocations">
             <list>
-                <value>com/easyBuy/mybatisWithSpring/mapper/EasyBuyUserMapper.xml</value>
+                <value>../com/easyBuy/mybatisWithSpring/mapper/EasyBuyUserMapper.xml</value>
             </list>
         </property>
     </bean>
