@@ -1,8 +1,11 @@
 package com.easyBuy.springMVC.mapper;
 
+import com.easyBuy.springMVC.pojo.EasyBuyUser;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import java.util.List;
 
 public class EasyBuyUserMapperTest {
 
@@ -15,7 +18,10 @@ public class EasyBuyUserMapperTest {
     public void findAll() throws Exception {
         ApplicationContext ap = new ClassPathXmlApplicationContext("/applicationContext.xml");
         EasyBuyUserMapper easyBuyUserMapper = (EasyBuyUserMapper) ap.getBean("easyBuyUserMapper");
-        easyBuyUserMapper.findAll();
+        List<EasyBuyUser> easyBuyUsers = easyBuyUserMapper.findAll();
+        for(EasyBuyUser e:easyBuyUsers){
+            System.out.println(e);
+        }
     }
 
     @Test
