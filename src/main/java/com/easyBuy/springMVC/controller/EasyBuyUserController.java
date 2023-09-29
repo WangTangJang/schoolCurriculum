@@ -48,6 +48,7 @@ public class EasyBuyUserController {
                 return "login";
             }else
             {
+                request.setAttribute("USERNAME",easyBuyUser.getUserName());
                 return "hello";
             }
         } catch (Exception e) {
