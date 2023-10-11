@@ -8,6 +8,7 @@ import java.util.List;
 /**
  * 用户数据访问层接口
  */
+
 public interface EasyBuyUserMapper {
 
     /**

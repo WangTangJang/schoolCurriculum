@@ -12,12 +12,13 @@ public class EasyBuyUserServiceImplTest {
     EasyBuyUserService easyBuyUserService;
     @Before
     public void init(){
-        ap = new ClassPathXmlApplicationContext("MybatisWithSpring/applicationContext.xml");
+        ap = new ClassPathXmlApplicationContext("applicationContext.xml");
         easyBuyUserService = (EasyBuyUserService) ap.getBean("easyBuyUserServiceImpl");
     }
 
     @Test
     public void count() throws Exception {
+        System.out.println(easyBuyUserService.count());
     }
 
     @Test
