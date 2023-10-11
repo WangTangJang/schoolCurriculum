@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="war" name="SSM">
-    <output-path>$PROJECT_DIR$/out/artifacts/SSM</output-path>
+    <output-path>$PROJECT_DIR$/target/artifacts/SSM</output-path>
     <root id="archive" name="SSM.war">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">

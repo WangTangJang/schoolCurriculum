@@ -1,8 +1,7 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="EasyBuy_SSM">
+  <artifact type="war" name="EasyBuy_SSM">
     <output-path>$PROJECT_DIR$/target/artifacts/EasyBuy_SSM</output-path>
-    <root id="root">
-      <element id="javaee-facet-resources" facet="EasyBuy_SSM/web/Web" />
+    <root id="archive" name="EasyBuy_SSM.war">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="EasyBuy_SSM" />
@@ -11,6 +10,7 @@
           <element id="library" level="project" name="lib" />
         </element>
       </element>
+      <element id="javaee-facet-resources" facet="EasyBuy_SSM/web/Web" />
     </root>
   </artifact>
 </component>
