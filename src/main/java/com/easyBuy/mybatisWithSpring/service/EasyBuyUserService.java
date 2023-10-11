@@ -1,6 +1,6 @@
 package com.easyBuy.mybatisWithSpring.service;
 
-import com.easyBuy.mybatis.pojo.EasyBuyUser;
+import com.easyBuy.mybatisWithSpring.pojo.EasyBuyUser;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

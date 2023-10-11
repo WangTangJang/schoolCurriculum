@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/EasyBuy_SSM/EasyBuy_SSM.iml" filepath="$PROJECT_DIR$/EasyBuy_SSM/EasyBuy_SSM.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybatis/mybatis.iml" filepath="$PROJECT_DIR$/mybatis/mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/schoolCurriculum.iml" filepath="$PROJECT_DIR$/schoolCurriculum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring/spring.iml" filepath="$PROJECT_DIR$/spring/spring.iml" />
     </modules>
   </component>
 </project>

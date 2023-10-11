@@ -1,6 +1,6 @@
 package com.easyBuy.mybatisWithSpring.service.impl;
 
-import com.easyBuy.mybatis.pojo.EasyBuyUser;
+import com.easyBuy.mybatisWithSpring.pojo.EasyBuyUser;
 import com.easyBuy.mybatisWithSpring.mapper.EasyBuyUserMapper;
 import com.easyBuy.mybatisWithSpring.service.EasyBuyUserService;
 import org.springframework.beans.factory.annotation.Autowired;

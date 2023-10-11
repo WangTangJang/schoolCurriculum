@@ -2,7 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/com.easyBuy.spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/com.easyBuy.spring-context.xsd">
     <!--    connection database-->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
@@ -11,7 +11,7 @@
         <property name="password" value="20020525"/>
     </bean>
     <!--    create SqlSessionFactory-->
-    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+    <bean id="sqlSessionFactory" class="org.mybatis.com.easyBuy.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="configLocation" value="mybatisConfig.xml"/>
         <property name="mapperLocations">
@@ -21,11 +21,11 @@
         </property>
     </bean>
     <!--创建SqlSession-->
-    <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+    <bean id="sqlSessionTemplate" class="org.mybatis.com.easyBuy.spring.SqlSessionTemplate">
         <constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"/>
     </bean>
 
-    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+    <bean class="org.mybatis.com.easyBuy.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.easyBuy.mybatisWithSpring.mapper"/>
     </bean>
     <context:component-scan base-package="com.easyBuy.mybatisWithSpring"/>
