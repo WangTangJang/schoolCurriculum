@@ -94,13 +94,12 @@
                 <c:forEach items="${requestScope.listProduct}" var="p">
                 <li>
                     <dl>
-                        <dt><a href="product-view.html" target="_blank"><img src="images/product/1.jpg" /></a></dt>
-                        <dd class="title"><a href="product-view.html" target="_blank">${p.title}</a></dd>
+                        <dt><a href="getProductById?id=${p.id}" target="_blank"><img src="images/product/1.jpg" /></a></dt>
+                        <dd class="title"><a href="getProductById?id=${p.id}" target="_blank">${p.title}</a></dd>
                         <dd class="price">￥${p.price}</dd>
                     </dl>
                 </li>
                 </c:forEach>
-
             </ul>
         </div>
         <div class="side">

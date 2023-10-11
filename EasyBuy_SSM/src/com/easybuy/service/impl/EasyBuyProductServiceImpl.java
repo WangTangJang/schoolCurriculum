@@ -1,6 +1,7 @@
 package com.easybuy.service.impl;
 
 import com.easybuy.mapper.EasyBuyProductMapper;
+import com.easybuy.pojo.EasyBuyProduct;
 import com.easybuy.service.EasyBuyProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,5 +17,10 @@ public class EasyBuyProductServiceImpl implements EasyBuyProductService {
     @Override
     public List findProductByPage(int page, int size) {
         return easyBuyProductMapper.findProductByPage((page-1)*size,size);
+    }
+
+    @Override
+    public EasyBuyProduct findById(int id) {
+        return easyBuyProductMapper.findById(id);
     }
 }
