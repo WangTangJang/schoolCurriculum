@@ -6,4 +6,7 @@
 	<select id="findNewsByPage" resultType="com.easybuy.pojo.EasyBuyNews">
 		select * from easybuy_news order by id desc limit #{start},#{end}
 	</select>
+	<select id="getEasyBuyNewsById" resultType="com.easybuy.pojo.EasyBuyNews">
+		select * from easybuy_news where id = #{id}
+	</select>
 </mapper>

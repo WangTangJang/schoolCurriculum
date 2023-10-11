@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.easyBuy.springMVC.mapper.EasyBuyUserMapper">
+
+    <!--统计用户数量-->
+    <select id="count" resultType="int">
+        select count(id) from easybuy_user
+    </select>
+
+    <!--查询所有的用户信息-->
+    <select id="findAll" resultType="com.easyBuy.springMVC.pojo.EasyBuyUser">
+        select * from easybuy_user
+    </select>
+
+    <!--用户登录-->
+    <select id="login" resultType="com.easyBuy.springMVC.pojo.EasyBuyUser">
+        select * from easybuy_user where loginName=#{loginName}  and password=#{password}
+    </select>
+
+    <!--根据用户ID查询用户信息-->
+    <select id="findUserById" resultType="com.easyBuy.springMVC.pojo.EasyBuyUser">
+        select * from easybuy_user where id= #{id}
+    </select>
+
+    <insert id="save" parameterType="com.easyBuy.springMVC.pojo.EasyBuyUser">
+        insert into easybuy_user(loginName,userName,password,sex,identityCode,email,mobile,type) values(#{loginName},#{userName},#{password},#{sex},#{identityCode},#{email},#{mobile},#{type})
+    </insert>
+
+    <update id="modify" parameterType="com.easyBuy.springMVC.pojo.EasyBuyUser">
+        update  easybuy_user set loginName=#{loginName},userName=#{userName},password=#{password},sex=#{sex},identityCode=#{identityCode},email=#{email},mobile=#{mobile},type=#{type} where id=#{id}
+    </update>
+
+    <delete id="delete">
+        delete from easybuy_user where id=#{id}
+    </delete>
+
+    <!--带条件查询(动态SQL)-->
+    <select id="findByWhere" parameterType="com.easyBuy.springMVC.pojo.EasyBuyUser" resultType="com.easyBuy.springMVC.pojo.EasyBuyUser">
+        select * from easybuy_user
+        <where>
+            <if test="id!=null">
+                and id=#{id}
+            </if>
+            <if test="loginName!=null and loginName!=''">
+                and loginName=#{loginName}
+            </if>
+            <if test="userName!=null and userName!=''">
+                and userName=#{userName}
+            </if>
+            <if test="sex!=null and sex!=''">
+                and sex=#{sex}
+            </if>
+            <if test="identityCode!=null and identityCode!=''">
+                and identityCode=#{identityCode}
+            </if>
+            <if test="email!=null and email!=''">
+                and email=#{email}
+            </if>
+            <if test="mobile!=null and mobile!=''">
+                and mobile=#{mobile}
+            </if>
+            <if test="type!=null">
+                and type=#{type}
+            </if>
+        </where>
+    </select>
+
+    <select id="findByWhere2" parameterType="com.easyBuy.springMVC.pojo.EasyBuyUser" resultType="com.easyBuy.springMVC.pojo.EasyBuyUser">
+        select * from easybuy_user
+        <where>
+            <if test="id!=null">
+                and id=#{id}
+            </if>
+            <if test="loginName!=null and loginName!=''">
+                and loginName=#{loginName}
+            </if>
+            <if test="userName!=null and userName!=''">
+                and userName like concat('%',#{userName},'%')
+            </if>
+            <if test="sex!=null and sex!=''">
+                and sex=#{sex}
+            </if>
+            <if test="identityCode!=null and identityCode!=''">
+                and identityCode=#{identityCode}
+            </if>
+            <if test="email!=null and email!=''">
+                and email=#{email}
+            </if>
+            <if test="mobile!=null and mobile!=''">
+                and mobile=#{mobile}
+            </if>
+            <if test="type!=null">
+                and type=#{type}
+            </if>
+        </where>
+    </select>
+
+    <update id="modify2" parameterType="com.easyBuy.springMVC.pojo.EasyBuyUser">
+        update  easybuy_user
+        <set>
+            <if test="loginName!=null and loginName!=''">
+                loginName=#{loginName},
+            </if>
+            <if test="userName!=null and userName!=''">
+                userName=#{userName},
+            </if>
+            <if test="sex!=null and sex!=''">
+                sex=#{sex},
+            </if>
+            <if test="identityCode!=null and identityCode!=''">
+                identityCode=#{identityCode},
+            </if>
+            <if test="email!=null and email!=''">
+                email=#{email},
+            </if>
+            <if test="mobile!=null and mobile!=''">
+                mobile=#{mobile},
+            </if>
+            <if test="type!=null">
+                type=#{type}
+            </if>
+        </set>
+        where id=#{id}
+    </update>
+
+    <update id="modify3" parameterType="com.easyBuy.springMVC.pojo.EasyBuyUser">
+        update  easybuy_user
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+            <if test="loginName!=null and loginName!=''">
+                loginName=#{loginName},
+            </if>
+            <if test="userName!=null and userName!=''">
+                userName=#{userName},
+            </if>
+            <if test="sex!=null and sex!=''">
+                sex=#{sex},
+            </if>
+            <if test="identityCode!=null and identityCode!=''">
+                identityCode=#{identityCode},
+            </if>
+            <if test="email!=null and email!=''">
+                email=#{email},
+            </if>
+            <if test="mobile!=null and mobile!=''">
+                mobile=#{mobile},
+            </if>
+            <if test="type!=null">
+                type=#{type}
+            </if>
+        </trim>
+    </update>
+
+    <select id="findByWhere3" parameterType="com.easyBuy.springMVC.pojo.EasyBuyUser" resultType="com.easyBuy.springMVC.pojo.EasyBuyUser">
+        select * from easybuy_user
+        <where>
+            <choose>
+                <when test="loginName!=null and loginName!=''">
+                    and loginName=#{loginName}
+                </when>
+                <when test="userName!=null and userName!=''">
+                    and userName=#{userName}
+                </when>
+                <when test="identityCode!=null and identityCode!=''">
+                    and identityCode=#{identityCode}
+                </when>
+            </choose>
+        </where>
+    </select>
+
+    <select id="findByWhere4" resultType="com.easyBuy.springMVC.pojo.EasyBuyUser">
+        select * from easybuy_user limit #{start},#{rows}
+    </select>
+</mapper>
+

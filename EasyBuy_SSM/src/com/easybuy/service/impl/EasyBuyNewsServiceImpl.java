@@ -20,4 +20,9 @@ public class EasyBuyNewsServiceImpl implements EasyBuyNewsService {
     public List<EasyBuyNews> findNewsByPage(int page, int size) {
         return easyBuyNewsMapper.findNewsByPage((page-1)*size,size);
     }
+
+    @Override
+    public EasyBuyNews getEasyBuyNewById(int id) {
+        return easyBuyNewsMapper.getEasyBuyNewsById(id);
+    }
 }
