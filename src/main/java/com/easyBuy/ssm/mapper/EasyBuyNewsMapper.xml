@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper
-		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.easybuy.mapper.EasyBuyNewsMapper">
-	<select id="findNewsByPage" resultType="com.easybuy.pojo.EasyBuyNews">
-		select * from easybuy_news order by id desc limit #{start},#{end}
-	</select>
-</mapper>
