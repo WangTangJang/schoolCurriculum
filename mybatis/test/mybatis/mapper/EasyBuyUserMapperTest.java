@@ -1,6 +1,6 @@
-package com.easyBuy.mybatis.mapper;
+package mybatis.mapper;
 
-import com.easyBuy.mybatis.pojo.EasyBuyUser;
+import mybatis.pojo.EasyBuyUser;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;

@@ -27,11 +27,7 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="configLocation" value="classpath:mybatisConfig.xml"/>
-        <property name="mapperLocations">
-            <list>
-                <value>com/easyBuy/springMVC/mapper/EasyBuyUserMapper.xml</value>
-            </list>
-        </property>
+
     </bean>
     <!--创建sqlSessionTemplate-->
     <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
@@ -42,7 +38,5 @@
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.easyBuy.springMVC.mapper"/>
     </bean>
-
-
 
 </beans>

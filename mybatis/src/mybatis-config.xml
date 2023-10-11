@@ -32,8 +32,6 @@
 
 <!--配置映射信息-->
     <mappers>
-        <mapper resource="com/easybuy/mapper/EasyBuyUserMapper.xml"/>
+        <mapper resource="mybatis/mapper/EasyBuyUserMapper.xml"/>
     </mappers>
-
-
 </configuration>
