@@ -25,9 +25,9 @@ public class EasyBuyUserController {
     public String doLogin(HttpServletRequest request)
     {
         System.out.println("------------------doLogin1---------------");
-        String loginName=request.getParameter("loginName");
+        String username=request.getParameter("username");
         String password=request.getParameter("password");
-        System.out.println("loginName:"+loginName);
+        System.out.println("username:"+username);
         System.out.println("password:"+password);
         return "hello";
     }
@@ -40,6 +40,7 @@ public class EasyBuyUserController {
     @RequestMapping("/doLogin2")
     public String doLogin2(String loginName,String password,HttpServletRequest request)
     {
+
         try {
             EasyBuyUser easyBuyUser=easyBuyUserMapper.login(loginName,password);
             if(easyBuyUser==null)
@@ -92,4 +93,3 @@ public class EasyBuyUserController {
         return "hello";
     }
 }
-

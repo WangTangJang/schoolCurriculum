@@ -1,17 +1,16 @@
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
-  Date: 2023/9/27
-  Time: 15:27
+  Date: 2023/10/12
+  Time: 20:13
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Title</title>
 </head>
 <body>
-
-<h1>${USERNAME},欢迎登录！</h1>
+这里是hello页面
 </body>
 </html>
