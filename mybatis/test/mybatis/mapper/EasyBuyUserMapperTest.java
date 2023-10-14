@@ -31,9 +31,23 @@ public class EasyBuyUserMapperTest {
     }
 
     @Test
-    public void count() throws Exception {
-        int count = easyBuyUserMapper.count();
-        System.out.println(count);
+    public void demo() throws Exception {
+        List<Integer> ids = new ArrayList<>();
+        ids.add(10);
+        ids.add(11);
+        ids.add(12);
+        EasyBuyUser easyBuyUser = new EasyBuyUser();
+        easyBuyUser.setIds(ids);
+        List<String> usernames = new ArrayList<>();
+        usernames.add("程广宁");
+        usernames.add("沈白");
+        usernames.add("尚泽忠");
+        easyBuyUser.setUserNames(usernames);
+        List<Object> result = sqlSession.selectList("foreachDemo",easyBuyUser);
+        System.out.println("-------------------------------------查询结果----------------------------------------");
+        for(Object o:result){
+            System.out.println(o);
+        }
     }
 
     @Test

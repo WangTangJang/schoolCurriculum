@@ -9,17 +9,17 @@
     </select>
 
     <!--返回所有的用户信息-->
-    <select id="findAll" resultType="com.easyBuy.mybatis.pojo.EasyBuyUser">
+    <select id="findAll" resultType="mybatis.pojo.EasyBuyUser">
        select * from easybuy_user
 
     </select>
 
     <!--据ID查询用户信息-->
-    <select id="findUserById" resultType="com.easyBuy.mybatis.pojo.EasyBuyUser">
+    <select id="findUserById" resultType="mybatis.pojo.EasyBuyUser">
         select * from easybuy_user where id=#{id}
     </select>
 
-    <select id="findUserByLike" resultType="com.easyBuy.mybatis.pojo.EasyBuyUser">
+    <select id="findUserByLike" resultType="mybatis.pojo.EasyBuyUser">
         select * from easybuy_user
         <where>
             <if test="userName!=null and userName!=''">
@@ -28,7 +28,7 @@
         </where>
     </select>
 
-    <select id="findUserByWhere" resultType="com.easyBuy.mybatis.pojo.EasyBuyUser">
+    <select id="findUserByWhere" resultType="mybatis.pojo.EasyBuyUser">
         select * from easybuy_user
         <where>
             <if test="id!=null">
@@ -68,8 +68,28 @@
         delete from easybuy_user where id=#{id}
     </delete>
 
-    <select id="findUserByLimit" resultType="com.easyBuy.mybatis.pojo.EasyBuyUser">
+    <select id="findUserByLimit" resultType="mybatis.pojo.EasyBuyUser">
         select *
         from easybuy_user limit #{start},#{end};
+    </select>
+    
+    <select id="foreachDemo" resultType="mybatis.pojo.EasyBuyUser">
+        select *
+        from easybuy_user
+        <where>
+            <if test="ids != null">
+                and id in
+                <foreach collection="ids" item="x" open="(" close=")" separator="," >
+                    #{x}
+                </foreach>
+            </if>
+            <if test="userNames !=null">
+                and userName in
+                <foreach collection="userNames" item="x" open="(" separator="," close=")">
+                    #{x}
+                </foreach>
+            </if>
+        </where>
+
     </select>
 </mapper>

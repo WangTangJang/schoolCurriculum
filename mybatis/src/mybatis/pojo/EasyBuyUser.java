@@ -1,5 +1,7 @@
 package mybatis.pojo;
 
+import java.util.List;
+
 public class EasyBuyUser {
     private Integer id;
     private String loginName;
@@ -10,6 +12,25 @@ public class EasyBuyUser {
     private String email;
     private String mobile;
     private Integer type;
+
+    private List<Integer> ids;
+
+    public List<String> getUserNames() {
+        return userNames;
+    }
+
+    public void setUserNames(List<String> userNames) {
+        this.userNames = userNames;
+    }
+
+    private List<String> userNames;
+    public List<Integer> getIds() {
+        return ids;
+    }
+
+    public void setIds(List<Integer> ids) {
+        this.ids = ids;
+    }
 
     public EasyBuyUser() {
     }
