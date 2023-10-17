@@ -9,6 +9,9 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.List;
+import java.util.Map;
+
 public class Demo {
 
 
@@ -23,6 +26,8 @@ public class Demo {
 
     @Test
     public void demo(){
-        easyBuyProductCategoryService.getProductCategoryByParentId(0);
+        Map<String, List<EasyBuyProductCategory>> map = easyBuyProductCategoryService.getProductCategoryByParentId(1);
+        System.out.println(map.toString());
+        System.out.println(map.keySet());
     }
 }
