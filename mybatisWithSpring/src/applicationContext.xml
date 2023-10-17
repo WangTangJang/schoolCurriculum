@@ -13,7 +13,7 @@
     <!--    create SqlSessionFactory-->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
-        <property name="configLocation" value="mybatisConfig.xml"/>
+        <property name="configLocation" value="mybatis-Config.xml"/>
         <property name="mapperLocations">
             <list>
                 <value>com/easyBuy/mybatisWithSpring/mapper/EasyBuyUserMapper.xml</value>

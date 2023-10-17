@@ -1,13 +1,14 @@
 <component name="ArtifactManager">
-  <artifact type="war" name="EasyBuy_SSM">
+  <artifact type="exploded-war" name="EasyBuy_SSM">
     <output-path>$PROJECT_DIR$/target/artifacts/EasyBuy_SSM</output-path>
-    <root id="archive" name="EasyBuy_SSM.war">
+    <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="EasyBuy_SSM" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="lib" />
+          <element id="library" level="project" name="Maven: junit:junit:4.13.2" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="EasyBuy_SSM/web/Web" />

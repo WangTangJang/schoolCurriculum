@@ -58,15 +58,6 @@
                       expression="execution(* com.easybuy.service..*.*(..))" />
         <aop:advisor advice-ref="txAdvice" pointcut-ref="serviceMethod" />
     </aop:config>
-    <!--配置数据访问层实现类-->
-<!--    <bean id="easyBuyUserMapper" class="com.ebuy.mapper.impl.EasyBuyUserMapperImpl">
-        <property name="sqlSessionTemplate" ref="sqlSessionTemplate"/>
-    </bean>
-    
-    <bean id="easybuyUserService" class="com.ebuy.service.impl.EasyBuyUserServiceImpl">
-        <property name="easyBuyUserMapper" ref="easyBuyUserMapper"/>
-    </bean>
-    -->
-    
+
 
 </beans>
