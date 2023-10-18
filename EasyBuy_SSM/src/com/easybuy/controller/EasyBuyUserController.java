@@ -53,6 +53,11 @@ public class EasyBuyUserController {
     @RequestMapping("doRegister")
     public String doRegister(EasyBuyUser easyBuyUser, HttpServletRequest request){
         try {
+            if (easyBuyUser.getLoginName()==null || easyBuyUser.getPassword()==null||easyBuyUser.getUserName()==null
+            || easyBuyUser.getSex()==null){
+                request.setAttribute("MSG","数据不可为空");
+                return "register";
+            }
             int result = easyBuyUserService.save(easyBuyUser);
             if(result !=1){
                 request.setAttribute("MSG","注册失败");

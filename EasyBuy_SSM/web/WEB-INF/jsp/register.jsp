@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
-  Date: 2023/10/10
-  Time: 16:57
+  Date: 2023/10/17
+  Time: 17:40
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -55,32 +55,50 @@
         <em class="corner lb"></em>
         <em class="corner rt"></em>
         <div class="box">
-            <h1>欢迎回到易买网</h1>
-            <form id="registerForm" method="post" action="doRegister" onsubmit="return checkForm(this)">
-                <table>1
-
+            <h1>欢迎注册易买网</h1>
+            <ul class="steps clearfix">
+                <li class="current"><em></em>填写注册信息</li>
+                <li class="last"><em></em>注册成功</li>
+            </ul>
+            <form id="regForm" method="post" action="doRegister" onsubmit="return checkForm(this);">
+                <table>
                     <tr>
-                        <td class="field">账号：</td>
+                        <td class="field">用户名：</td>
                         <td><input class="text" type="text" name="loginName" onfocus="FocusItem(this)" onblur="CheckItem(this);" /><span></span></td>
                     </tr>
                     <tr>
-                        <td class="field">密码：</td>
+                        <td class="field">登录密码：</td>
                         <td><input class="text" type="password" id="passWord" name="password" onfocus="FocusItem(this)" onblur="CheckItem(this);" /><span></span></td>
                     </tr>
                     <tr>
-                        <td class="field">昵称：</td>
-                        <td><input class="text" type="text" id="userName" name="userName" onfocus="FocusItem(this)" onblur="CheckItem(this);" /><span></span></td>
+                        <td class="field">确认密码：</td>
+                        <td><input class="text" type="password" name="rePassWord" onfocus="FocusItem(this)" onblur="CheckItem(this);" /><span></span></td>
+                    </tr>
+                    <tr>
+                        <td class="field">姓名：</td>
+                        <td><input class="text" type="text" name="userName" onfocus="FocusItem(this)" onblur="CheckItem(this);" /><span></span></td>
                     </tr>
                     <tr>
                         <td class="field">性别：</td>
-                        <td><input class="text" type="text" id="sex" name="sex" onfocus="FocusItem(this)" onblur="CheckItem(this);" /><span></span></td>
+                        <td><input class="text" type="radio" name="sex"  value="1" />男
+                            <input class="text" type="radio" name="sex"  value="0" />女
+                            <span></span></td>
+                    </tr>
+                    <tr>
+                        <td class="field">身份证号：</td>
+                        <td><input class="text" type="text" name="identityCode" onfocus="FocusItem(this)" onblur="CheckItem(this);" /><span></span></td>
+                    </tr>
+                    <tr>
+                        <td class="field">邮箱：</td>
+                        <td><input class="text" type="text" name="email" onfocus="FocusItem(this)" onblur="CheckItem(this);" /><span></span></td>
+                    </tr>
+                    <tr>
+                        <td class="field">手机号：</td>
+                        <td><input class="text" type="text" name="mobile" onfocus="FocusItem(this)" onblur="CheckItem(this);" /><span></span></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td><label class="ui-green"><input type="submit" name="submit" value="立即注册" /></label>
-
-                            <span style="display:inline-block;color:red;font-size:18px">${requestScope.MSG}</span>
-                        </td>
+                        <td><label class="ui-green"><input type="submit" name="submit" value="提交注册" /></label></td>
                     </tr>
                 </table>
             </form>
