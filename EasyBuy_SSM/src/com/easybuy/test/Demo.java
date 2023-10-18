@@ -40,6 +40,11 @@ public class Demo {
     }
 
     @Test
+    public void demo3() {
+        System.out.println(easyBuyProductService.countProductByCid(2));
+    }
+
+    @Test
     public void demo2(){
         EasyBuyUser easyBuyUser = new EasyBuyUser();
         easyBuyUser.setUserName("逃命");

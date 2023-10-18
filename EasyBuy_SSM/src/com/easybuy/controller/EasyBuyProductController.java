@@ -17,17 +17,24 @@ public class EasyBuyProductController {
     EasyBuyProductService easyBuyProductService;
 
     @RequestMapping("getProductById")
-    public String  getProductById(int id, HttpServletRequest request){
+    public String getProductById(int id, HttpServletRequest request) {
         EasyBuyProduct easyBuyProduct = easyBuyProductService.findById(id);
-        request.setAttribute("ep",easyBuyProduct);
+        request.setAttribute("ep", easyBuyProduct);
         return "product-view";
     }
 
     @RequestMapping("getProductByCid")
-    public String getProductByCid(int cid , @RequestParam(value = "page" ,defaultValue = "1") int page,
-                                  @RequestParam(value = "size",defaultValue = "12") int size,HttpServletRequest request){
-        List list = easyBuyProductService.findProductByCid(cid ,page ,size);
-        request.setAttribute("list",list);
+    public String getProductByCid(int cid, @RequestParam(value = "page", defaultValue = "1") int page,
+                                  @RequestParam(value = "size", defaultValue = "12") int size, HttpServletRequest request) {
+        List list = easyBuyProductService.findProductByCid(cid, page, size);
+
+        int count = easyBuyProductService.countProductByCid(cid);// 获取总页数
+
+        int pages = (count % size) > 0 ? (count / size) + 1 : (count / size);
+
+        request.setAttribute("list", list);
+        request.setAttribute("page", page);
+        request.setAttribute("pages", pages);
         return "product-list";
     }
 }

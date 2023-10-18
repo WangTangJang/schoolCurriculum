@@ -28,4 +28,9 @@ public class EasyBuyProductServiceImpl implements EasyBuyProductService {
     public List<EasyBuyProduct> findProductByCid(int cid, int page, int size) {
         return easyBuyProductMapper.findProductByCid(cid ,(page-1)*size ,size);
     }
+
+    @Override
+    public int countProductByCid(int cid) {
+        return easyBuyProductMapper.countProductByCid(cid);
+    }
 }

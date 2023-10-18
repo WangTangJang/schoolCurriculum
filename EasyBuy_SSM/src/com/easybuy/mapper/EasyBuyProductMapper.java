@@ -12,4 +12,6 @@ public interface EasyBuyProductMapper {
     public EasyBuyProduct findById(int id);
 
     public List<EasyBuyProduct> findProductByCid(@Param("cid") int cid,@Param("start") int start,@Param("end") int end);
+
+    public int countProductByCid(int cid);
 }

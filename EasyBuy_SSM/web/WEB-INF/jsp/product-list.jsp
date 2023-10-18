@@ -88,13 +88,21 @@
             <h2>全部商品</h2>
             <div class="pager">
                 <ul class="clearfix">
-                    <li><a href="#">上一页</a></li>
-                    <li class="current">1</li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">下一页</a></li>
+                    <li><a href="getProductByCid?cid=${param.cid}">首页</a></li>
+
+                    <c:if test="${requestScope.page>1}">
+                        <li><a href="getProductByCid?cid=${param.cid}&page=${requestScope.page-1}">上一页</a></li>
+                    </c:if>
+                    <c:if test="${requestScope.page==1}">
+                        <li><a href="getProductByCid?cid=${param.cid}&page=1">上一页</a></li>
+                    </c:if>
+                    <c:if test="${requestScope.page<requestScope.pages}">
+                        <li><a href="getProductByCid?cid=${param.cid}&page=${requestScope.page+1}">下一页</a></li>
+                    </c:if>
+                    <c:if test="${requestScope.page==requestScope.pages}">
+                        <li><a href="getProductByCid?cid=${param.cid}&page=${requestScope.pages}">下一页</a></li>
+                    </c:if>
+                    <li><a href="getProductByCid?cid=${param.cid}&page=${requestScope.pages}">末页</a></li>
                 </ul>
             </div>
             <div class="clear"></div>
@@ -112,13 +120,21 @@
             <div class="clear"></div>
             <div class="pager">
                 <ul class="clearfix">
-                    <li><a href="#">上一页</a></li>
-                    <li class="current">1</li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">下一页</a></li>
+                    <li><a href="getProductByCid?cid=${param.cid}">首页</a></li>
+
+                    <c:if test="${requestScope.page>1}">
+                        <li><a href="getProductByCid?cid=${param.cid}&page=${requestScope.page-1}">上一页</a></li>
+                    </c:if>
+                    <c:if test="${requestScope.page==1}">
+                        <li><a href="getProductByCid?cid=${param.cid}&page=1">上一页</a></li>
+                    </c:if>
+                    <c:if test="${requestScope.page<requestScope.pages}">
+                        <li><a href="getProductByCid?cid=${param.cid}&page=${requestScope.page+1}">下一页</a></li>
+                    </c:if>
+                    <c:if test="${requestScope.page==requestScope.pages}">
+                        <li><a href="getProductByCid?cid=${param.cid}&page=${requestScope.pages}">下一页</a></li>
+                    </c:if>
+                    <li><a href="getProductByCid?cid=${param.cid}&page=${requestScope.pages}">末页</a></li>
                 </ul>
             </div>
         </div>

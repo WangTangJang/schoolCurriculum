@@ -13,4 +13,7 @@
     <select id="findProductByCid" resultType="com.easybuy.pojo.EasyBuyProduct">
         select * from easybuy_product where cid = #{cid} limit #{start}, #{end}
     </select>
+    <select id="countProductByCid" resultType="int">
+        select count(*) from easybuy_product where cid = #{cid}
+    </select>
 </mapper>

@@ -12,4 +12,7 @@ public interface EasyBuyProductService {
     public EasyBuyProduct findById(int id);
 
     public List<EasyBuyProduct> findProductByCid(int cid ,int page, int size);
+
+    public int countProductByCid(int cid);
+
 }
