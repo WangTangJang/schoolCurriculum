@@ -30,5 +30,10 @@ public interface EasyBuyUserMapper {
      */
     public EasyBuyUser login(@Param("loginName") String loginName, @Param("password") String password)throws Exception;
 
-
+    /**
+     * 用户注册
+     * @param eu 用户实体
+     * @return 注册结果
+     */
+    public int save(EasyBuyUser eu);
 }

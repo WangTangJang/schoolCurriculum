@@ -3,8 +3,10 @@ package com.easybuy.test;
 import com.easybuy.mapper.EasyBuyProductCategoryMapper;
 import com.easybuy.pojo.EasyBuyProduct;
 import com.easybuy.pojo.EasyBuyProductCategory;
+import com.easybuy.pojo.EasyBuyUser;
 import com.easybuy.service.EasyBuyProductCategoryService;
 import com.easybuy.service.EasyBuyProductService;
+import com.easybuy.service.EasyBuyUserService;
 import com.easybuy.service.impl.EasyBuyProductCategoryServiceImpl;
 import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
@@ -25,6 +27,7 @@ public class Demo {
     ApplicationContext applicationContext;
     EasyBuyProductCategoryService easyBuyProductCategoryService;
     EasyBuyProductService easyBuyProductService;
+    EasyBuyUserService easyBuyUserService;
     private SqlSession sqlSession;
 
     @Before
@@ -33,11 +36,20 @@ public class Demo {
         easyBuyProductCategoryService = (EasyBuyProductCategoryService) applicationContext.getBean("easyBuyProductCategoryServiceImpl");
         sqlSession = (SqlSession) applicationContext.getBean("sqlSessionTemplate"); // 初始化sqlSession对象
         easyBuyProductService = (EasyBuyProductService) applicationContext.getBean("easyBuyProductServiceImpl");
+        easyBuyUserService = (EasyBuyUserService) applicationContext.getBean("easyBuyUserServiceImpl");
     }
 
     @Test
     public void demo2(){
-        easyBuyProductService.findProductByCid(2,1,10);
+        EasyBuyUser easyBuyUser = new EasyBuyUser();
+        easyBuyUser.setUserName("逃命");
+        easyBuyUser.setLoginName("123");
+        easyBuyUser.setPassword("123");
+        easyBuyUser.setEmail("123");
+        easyBuyUser.setSex(1);
+        easyBuyUser.setMobile("123");
+        easyBuyUser.setIdentityCode("123");
+        easyBuyUserService.save(easyBuyUser);
     }
 
     @Test

@@ -7,13 +7,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11ffcae2-409c-47f2-91cf-261e004c6885" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/EasyBuy_SSM/web/WEB-INF/jsp/product-list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/controller/EasyBuyProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/controller/EasyBuyProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/mapper/EasyBuyProductMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/mapper/EasyBuyProductMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/controller/EasyBuyUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/controller/EasyBuyUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/mapper/EasyBuyUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/mapper/EasyBuyUserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/mapper/EasyBuyUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/mapper/EasyBuyUserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/service/EasyBuyUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/service/EasyBuyUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/service/impl/EasyBuyUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/service/impl/EasyBuyUserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/test/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/test/Demo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/src/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/EasyBuy_SSM/src/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/web/WEB-INF/jsp/hello.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/EasyBuy_SSM/web/WEB-INF/jsp/register.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/web/WEB-INF/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/EasyBuy_SSM/web/WEB-INF/jsp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/web/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/EasyBuy_SSM/web/WEB-INF/jsp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/web/WEB-INF/jsp/product-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/EasyBuy_SSM/web/WEB-INF/jsp/product-list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/EasyBuy_SSM/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/web/list.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +59,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.15">
-    <configuration name="Demo.demo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Demo.demo" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="EasyBuy_SSM" />
       <extension name="coverage">
         <pattern>
@@ -86,8 +92,6 @@
       </method>
     </configuration>
     <configuration name="Tomcat 8.5.15" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.15" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/EasyBuy_SSM/" />
-      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="EasyBuy_SSM">
           <settings>
@@ -166,7 +170,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.Demo.demo2" />
-        <item itemvalue="JUnit.Demo.demo" />
       </list>
     </recent_temporary>
   </component>
@@ -182,7 +185,7 @@
       <updated>1697588372757</updated>
       <workItem from="1697588374771" duration="125000" />
       <workItem from="1697588507219" duration="306000" />
-      <workItem from="1697590072368" duration="4709000" />
+      <workItem from="1697590072368" duration="7806000" />
     </task>
     <task id="LOCAL-00001" summary="查询商品方式+1">
       <created>1697590414035</created>
@@ -198,90 +201,101 @@
       <option name="project" value="LOCAL" />
       <updated>1697591746998</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="数据库中数据不足">
+      <created>1697595317525</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1697595317525</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="查询商品方式+1" />
     <MESSAGE value="简化log4j前" />
-    <option name="LAST_COMMIT_MESSAGE" value="简化log4j前" />
+    <MESSAGE value="数据库中数据不足" />
+    <option name="LAST_COMMIT_MESSAGE" value="数据库中数据不足" />
   </component>
   <component name="WindowStateProjectService">
     <state x="873" y="399" key="#Tomcat_Server" timestamp="1697593218673">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="873" y="399" key="#Tomcat_Server/0.0.1920.1040@0.0.1920.1040" timestamp="1697593218673" />
-    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1697593225171">
+    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1697595959083">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1697593225171" />
-    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1697591163773">
+    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1697595959083" />
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1697596746223">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1697591163773" />
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1697596746223" />
     <state x="824" y="140" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1697593219463">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="824" y="140" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1920.1040@0.0.1920.1040" timestamp="1697593219463" />
-    <state x="481" y="81" key="CommitChangelistDialog2" timestamp="1697591746677">
+    <state x="481" y="81" key="CommitChangelistDialog2" timestamp="1697595317198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="481" y="81" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1697591746677" />
+    <state x="481" y="81" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1697595317198" />
     <state x="877" y="264" key="FileChooserDialogImpl" timestamp="1697593217369">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="877" y="264" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1697593217369" />
-    <state width="1290" height="281" key="GridCell.Tab.0.bottom" timestamp="1697595270019">
+    <state width="1290" height="309" key="GridCell.Tab.0.bottom" timestamp="1697598294932">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1290" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1697595270019" />
-    <state width="1290" height="281" key="GridCell.Tab.0.center" timestamp="1697595270019">
+    <state width="1290" height="309" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1697598294932" />
+    <state width="1290" height="309" key="GridCell.Tab.0.center" timestamp="1697598294932">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1290" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1697595270019" />
-    <state width="1290" height="281" key="GridCell.Tab.0.left" timestamp="1697595270019">
+    <state width="1290" height="309" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1697598294932" />
+    <state width="1290" height="309" key="GridCell.Tab.0.left" timestamp="1697598294932">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1290" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1697595270019" />
-    <state width="1290" height="281" key="GridCell.Tab.0.right" timestamp="1697595270019">
+    <state width="1290" height="309" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1697598294932" />
+    <state width="1290" height="309" key="GridCell.Tab.0.right" timestamp="1697598294932">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1290" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1697595270019" />
-    <state width="1290" height="281" key="GridCell.Tab.1.bottom" timestamp="1697593568449">
+    <state width="1290" height="309" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1697598294932" />
+    <state width="1290" height="309" key="GridCell.Tab.1.bottom" timestamp="1697598294822">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1290" height="281" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1697593568449" />
-    <state width="1290" height="281" key="GridCell.Tab.1.center" timestamp="1697593568449">
+    <state width="1290" height="309" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1697598294822" />
+    <state width="1290" height="309" key="GridCell.Tab.1.center" timestamp="1697598294822">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1290" height="281" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1697593568449" />
-    <state width="1290" height="281" key="GridCell.Tab.1.left" timestamp="1697593568449">
+    <state width="1290" height="309" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1697598294822" />
+    <state width="1290" height="309" key="GridCell.Tab.1.left" timestamp="1697598294822">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1290" height="281" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1697593568449" />
-    <state width="1290" height="281" key="GridCell.Tab.1.right" timestamp="1697593568449">
+    <state width="1290" height="309" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1697598294822" />
+    <state width="1290" height="309" key="GridCell.Tab.1.right" timestamp="1697598294822">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1290" height="281" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1697593568449" />
-    <state width="1290" height="281" key="GridCell.Tab.2.bottom" timestamp="1697593568449">
+    <state width="1290" height="309" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1697598294822" />
+    <state width="1290" height="309" key="GridCell.Tab.2.bottom" timestamp="1697598294823">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1290" height="281" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1697593568449" />
-    <state width="1290" height="281" key="GridCell.Tab.2.center" timestamp="1697593568449">
+    <state width="1290" height="309" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1697598294823" />
+    <state width="1290" height="309" key="GridCell.Tab.2.center" timestamp="1697598294822">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1290" height="281" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1697593568449" />
-    <state width="1290" height="281" key="GridCell.Tab.2.left" timestamp="1697593568449">
+    <state width="1290" height="309" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1697598294822" />
+    <state width="1290" height="309" key="GridCell.Tab.2.left" timestamp="1697598294822">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1290" height="281" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1697593568449" />
-    <state width="1290" height="281" key="GridCell.Tab.2.right" timestamp="1697593568449">
+    <state width="1290" height="309" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1697598294822" />
+    <state width="1290" height="309" key="GridCell.Tab.2.right" timestamp="1697598294823">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1290" height="281" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1697593568449" />
+    <state width="1290" height="309" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1697598294823" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1697590976055">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

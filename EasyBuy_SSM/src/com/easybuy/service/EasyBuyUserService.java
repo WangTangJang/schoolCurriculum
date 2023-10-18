@@ -31,4 +31,10 @@ public interface EasyBuyUserService {
      */
     public EasyBuyUser login(String loginName,String password)throws Exception;
 
+    /**
+     * 用户注册
+     * @param eu 用户实体
+     * @return 注册结果
+     */
+    public int save(EasyBuyUser eu);
 }

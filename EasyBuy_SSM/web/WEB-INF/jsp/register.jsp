@@ -56,22 +56,30 @@
         <em class="corner rt"></em>
         <div class="box">
             <h1>欢迎回到易买网</h1>
-            <form id="loginForm" method="post" action="doLogin" onsubmit="return checkForm(this)">
+            <form id="registerForm" method="post" action="doRegister" onsubmit="return checkForm(this)">
                 <table>1
 
                     <tr>
-                        <td class="field">用户名：</td>
+                        <td class="field">账号：</td>
                         <td><input class="text" type="text" name="loginName" onfocus="FocusItem(this)" onblur="CheckItem(this);" /><span></span></td>
                     </tr>
                     <tr>
-                        <td class="field">登录密码：</td>
+                        <td class="field">密码：</td>
                         <td><input class="text" type="password" id="passWord" name="password" onfocus="FocusItem(this)" onblur="CheckItem(this);" /><span></span></td>
                     </tr>
-                                   <tr>
+                    <tr>
+                        <td class="field">昵称：</td>
+                        <td><input class="text" type="text" id="userName" name="userName" onfocus="FocusItem(this)" onblur="CheckItem(this);" /><span></span></td>
+                    </tr>
+                    <tr>
+                        <td class="field">性别：</td>
+                        <td><input class="text" type="text" id="sex" name="sex" onfocus="FocusItem(this)" onblur="CheckItem(this);" /><span></span></td>
+                    </tr>
+                    <tr>
                         <td></td>
-                        <td><label class="ui-green"><input type="submit" name="submit" value="立即登录" /></label>
+                        <td><label class="ui-green"><input type="submit" name="submit" value="立即注册" /></label>
 
-                        <span style="display:inline-block;color:red;font-size:18px">${requestScope.MSG}</span>
+                            <span style="display:inline-block;color:red;font-size:18px">${requestScope.MSG}</span>
                         </td>
                     </tr>
                 </table>

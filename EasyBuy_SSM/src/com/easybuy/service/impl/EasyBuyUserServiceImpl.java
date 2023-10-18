@@ -29,4 +29,9 @@ public class EasyBuyUserServiceImpl implements EasyBuyUserService {
     public EasyBuyUser login(String loginName, String password) throws Exception {
         return easyBuyUserMapper.login(loginName,password);
     }
+
+    @Override
+    public int save(EasyBuyUser eu) {
+        return easyBuyUserMapper.save(eu);
+    }
 }

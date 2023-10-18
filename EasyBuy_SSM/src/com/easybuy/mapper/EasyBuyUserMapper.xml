@@ -16,4 +16,9 @@
         select  * from easybuy_user where loginName=#{loginName} and password=#{password}
     </select>
 
+    <insert id="save" parameterType="com.easybuy.pojo.EasyBuyUser">
+        insert into easybuy_user(loginName,userName,password,sex,identityCode,email,mobile)
+        values(#{loginName},#{userName},#{password},#{sex},#{identityCode},#{email},#{mobile})
+    </insert>
+
 </mapper>

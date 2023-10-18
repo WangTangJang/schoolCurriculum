@@ -23,6 +23,12 @@ public class EasyBuyUserController {
         return "login";
     }
 
+    @RequestMapping("/toRegister")
+    public String toRegister(){
+        return "register";
+    }
+
+
     @RequestMapping("/doLogin")
     public String doLogin(EasyBuyUser easyBuyUser, HttpServletRequest request)
     {
@@ -44,6 +50,19 @@ public class EasyBuyUserController {
         return "redirect:/index";
     }
 
+    @RequestMapping("doRegister")
+    public String doRegister(EasyBuyUser easyBuyUser, HttpServletRequest request){
+        try {
+            int result = easyBuyUserService.save(easyBuyUser);
+            if(result !=1){
+                request.setAttribute("MSG","注册失败");
+                return "register";
+            }
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
 
+        return "redirect:/index";
+    }
 
 }
