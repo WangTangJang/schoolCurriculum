@@ -15,12 +15,17 @@ public class EasyBuyProductServiceImpl implements EasyBuyProductService {
     EasyBuyProductMapper easyBuyProductMapper;
 
     @Override
-    public List findProductByPage(int page, int size) {
+    public List<EasyBuyProduct> findProductByPage(int page, int size) {
         return easyBuyProductMapper.findProductByPage((page-1)*size,size);
     }
 
     @Override
     public EasyBuyProduct findById(int id) {
         return easyBuyProductMapper.findById(id);
+    }
+
+    @Override
+    public List<EasyBuyProduct> findProductByCid(int cid, int page, int size) {
+        return easyBuyProductMapper.findProductByCid(cid ,(page-1)*size ,size);
     }
 }

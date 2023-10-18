@@ -10,4 +10,6 @@ public interface EasyBuyProductService {
     public List<EasyBuyProduct> findProductByPage(int page, int size);
 
     public EasyBuyProduct findById(int id);
+
+    public List<EasyBuyProduct> findProductByCid(int cid ,int page, int size);
 }

@@ -12,6 +12,6 @@
     </select>
 
     <select id="findByCid" resultType="com.easybuy.pojo.EasyBuyProduct">
-        select * from easybuy_product where cid = #{cid} order limit #{start}, #{end}
+        select * from easybuy_product where cid = #{cid} limit #{start}, #{end}
     </select>
 </mapper>

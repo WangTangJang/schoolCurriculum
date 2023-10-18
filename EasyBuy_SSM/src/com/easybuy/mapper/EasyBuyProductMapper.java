@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface EasyBuyProductMapper {
 
-    public List findProductByPage(@Param("start") int start, @Param("end") int end);
+    public List<EasyBuyProduct> findProductByPage(@Param("start") int start, @Param("end") int end);
 
     public EasyBuyProduct findById(int id);
 
