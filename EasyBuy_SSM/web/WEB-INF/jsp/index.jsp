@@ -60,28 +60,10 @@
                     <c:if test="${m.key=='图书、音像、电子书刊'||m.key=='手机'}">
                         <dt>${m.key}</dt>
                         <c:forEach items="${m.value}" var="v">
-                            <dd><a href="product-list.html">${v.name}</a></dd>
+                            <dd><a href="getProductByCid?cid=${v.id}">${v.name}</a></dd>
                         </c:forEach>
                     </c:if>
                 </c:forEach>
-                <%--
-                                <dd><a href="product-list.html">图书</a></dd>
-                                <dd><a href="product-list.html">音乐</a></dd>
-                                <dt>百货</dt>
-                                <dd><a href="product-list.html">运动健康</a></dd>
-                                <dd><a href="product-list.html">服装</a></dd>
-                                <dd><a href="product-list.html">家居</a></dd>
-                                <dd><a href="product-list.html">美妆</a></dd>
-                                <dd><a href="product-list.html">母婴</a></dd>
-                                <dd><a href="product-list.html">食品</a></dd>
-                                <dd><a href="product-list.html">手机数码</a></dd>
-                                <dd><a href="product-list.html">家具首饰</a></dd>
-                                <dd><a href="product-list.html">手表饰品</a></dd>
-                                <dd><a href="product-list.html">鞋包</a></dd>
-                                <dd><a href="product-list.html">家电</a></dd>
-                                <dd><a href="product-list.html">电脑办公</a></dd>
-                                <dd><a href="product-list.html">玩具文具</a></dd>
-                                <dd><a href="product-list.html">汽车用品</a></dd>--%>
             </dl>
         </div>
         <div class="spacer"></div>

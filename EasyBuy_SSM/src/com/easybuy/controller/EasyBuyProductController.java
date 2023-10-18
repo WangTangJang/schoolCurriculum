@@ -5,8 +5,10 @@ import com.easybuy.service.EasyBuyProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 @Controller
 public class EasyBuyProductController {
@@ -19,5 +21,13 @@ public class EasyBuyProductController {
         EasyBuyProduct easyBuyProduct = easyBuyProductService.findById(id);
         request.setAttribute("ep",easyBuyProduct);
         return "product-view";
+    }
+
+    @RequestMapping("getProductByCid")
+    public String getProductByCid(int cid , @RequestParam(value = "page" ,defaultValue = "1") int page,
+                                  @RequestParam(value = "size",defaultValue = "12") int size,HttpServletRequest request){
+        List list = easyBuyProductService.findProductByCid(cid ,page ,size);
+        request.setAttribute("list",list);
+        return "product-list";
     }
 }
