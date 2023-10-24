@@ -21,8 +21,8 @@ public class EasyBuyUserServiceImpl implements EasyBuyUserService {
     }
 
     @Override
-    public List<EasyBuyUser> findAll() throws Exception {
-        return easyBuyUserMapper.findAll();
+    public List<EasyBuyUser> findAll(int page,int size) throws Exception {
+        return easyBuyUserMapper.findAll((page-1)*size,size);
     }
 
     @Override
@@ -30,8 +30,14 @@ public class EasyBuyUserServiceImpl implements EasyBuyUserService {
         return easyBuyUserMapper.login(loginName,password);
     }
 
-    @Override
-    public int save(EasyBuyUser eu) {
+
+    /**
+     * 注册用户
+     * @param eu
+     * @return
+     */
+    public int save(EasyBuyUser eu){
         return easyBuyUserMapper.save(eu);
     }
+
 }

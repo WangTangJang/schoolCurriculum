@@ -18,7 +18,7 @@ public interface EasyBuyUserMapper {
      * @return
      * @throws Exception
      */
-    public List<EasyBuyUser> findAll()throws Exception;
+    public List<EasyBuyUser> findAll(@Param("start") int start,@Param("end") int end)throws Exception;
 
 
     /**
@@ -31,9 +31,28 @@ public interface EasyBuyUserMapper {
     public EasyBuyUser login(@Param("loginName") String loginName, @Param("password") String password)throws Exception;
 
     /**
-     * 用户注册
-     * @param eu 用户实体
-     * @return 注册结果
+     * 注册用户
+     * @param eu
+     * @return
      */
     public int save(EasyBuyUser eu);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

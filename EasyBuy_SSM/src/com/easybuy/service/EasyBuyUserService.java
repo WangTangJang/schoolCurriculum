@@ -19,7 +19,7 @@ public interface EasyBuyUserService {
      * @return
      * @throws Exception
      */
-    public List<EasyBuyUser> findAll()throws Exception;
+    public List<EasyBuyUser> findAll(int page,int size)throws Exception;
 
 
     /**
@@ -31,10 +31,13 @@ public interface EasyBuyUserService {
      */
     public EasyBuyUser login(String loginName,String password)throws Exception;
 
+
     /**
-     * 用户注册
-     * @param eu 用户实体
-     * @return 注册结果
+     * 注册用户
+     * @param eu
+     * @return
      */
     public int save(EasyBuyUser eu);
+
+
 }

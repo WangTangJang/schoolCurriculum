@@ -9,7 +9,7 @@
     </select>
 
     <select id="findAll" resultType="com.easybuy.pojo.EasyBuyUser">
-        select  * from easybuy_user
+        select  * from easybuy_user limit #{start},#{end}
     </select>
 
     <select id="login" resultType="com.easybuy.pojo.EasyBuyUser">
@@ -20,5 +20,10 @@
         insert into easybuy_user(loginName,userName,password,sex,identityCode,email,mobile)
         values(#{loginName},#{userName},#{password},#{sex},#{identityCode},#{email},#{mobile})
     </insert>
+
+
+
+
+
 
 </mapper>

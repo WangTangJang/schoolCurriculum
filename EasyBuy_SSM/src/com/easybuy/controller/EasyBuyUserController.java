@@ -7,7 +7,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.ContextLoaderListener;
+import org.springframework.web.filter.CharacterEncodingFilter;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -23,10 +25,21 @@ public class EasyBuyUserController {
         return "login";
     }
 
-    @RequestMapping("/toRegister")
-    public String toRegister(){
+    @RequestMapping("/toReg")
+    public String toReg(){
         return "register";
     }
+
+    @RequestMapping("/doReg")
+    public String doReg(EasyBuyUser eu)
+    {
+        CharacterEncodingFilter fd;
+        int r=easyBuyUserService.save(eu);
+        return "redirect:toLogin";
+
+    }
+
+
 
 
     @RequestMapping("/doLogin")
@@ -50,24 +63,32 @@ public class EasyBuyUserController {
         return "redirect:/index";
     }
 
-    @RequestMapping("doRegister")
-    public String doRegister(EasyBuyUser easyBuyUser, HttpServletRequest request){
+    @RequestMapping("toAdminUser")
+    public String toAdminUser(HttpServletRequest request, @RequestParam(value = "page",defaultValue = "1") int page,@RequestParam(value = "size",defaultValue = "7") int size)
+    {
         try {
-            if (easyBuyUser.getLoginName()==null || easyBuyUser.getPassword()==null||easyBuyUser.getUserName()==null
-            || easyBuyUser.getSex()==null){
-                request.setAttribute("MSG","数据不可为空");
-                return "register";
-            }
-            int result = easyBuyUserService.save(easyBuyUser);
-            if(result !=1){
-                request.setAttribute("MSG","注册失败");
-                return "register";
-            }
-        }catch (Exception e) {
+            List list=easyBuyUserService.findAll(page,size);
+
+            int count=easyBuyUserService.count();
+
+
+            int pages=  (count%size==0)?count/size:(count/size)+1;
+
+
+            request.setAttribute("pages",pages);
+
+            request.setAttribute("list",list);
+            request.setAttribute("page",page);
+
+
+
+        } catch (Exception e) {
             e.printStackTrace();
         }
+        return "manage/user";
 
-        return "redirect:/index";
+
     }
+
 
 }
