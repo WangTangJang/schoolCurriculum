@@ -37,6 +37,12 @@ public class Demo {
         sqlSession = (SqlSession) applicationContext.getBean("sqlSessionTemplate"); // 初始化sqlSession对象
         easyBuyProductService = (EasyBuyProductService) applicationContext.getBean("easyBuyProductServiceImpl");
         easyBuyUserService = (EasyBuyUserService) applicationContext.getBean("easyBuyUserServiceImpl");
+
+    }
+
+    @Test
+    public void demo4() {
+
     }
 
     @Test

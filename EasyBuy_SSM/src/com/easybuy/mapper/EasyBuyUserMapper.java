@@ -37,22 +37,18 @@ public interface EasyBuyUserMapper {
      */
     public int save(EasyBuyUser eu);
 
+    /**
+     * 通过id删除用户
+     * @param id id值
+     * @return 删除结果
+     */
+    public int deleteUser(int id);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    /**
+     * 通过传进来的用户信息进行修改
+     * @param eu 用户信息
+     * @return 修改结果
+     */
+    public int modifyUser(EasyBuyUser eu);
 
 }

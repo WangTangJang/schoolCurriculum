@@ -21,6 +21,38 @@
         values(#{loginName},#{userName},#{password},#{sex},#{identityCode},#{email},#{mobile})
     </insert>
 
+    <delete id="deleteUser" parameterType="int">
+        delete from easybuy_user where id=#{id}
+    </delete>
+
+    <update id="modifyUser" parameterType="com.easybuy.pojo.EasyBuyUser">
+        update easybuy_user set
+        <if test="loginName!='' and loginName!=null">
+            loginName=#{loginName},
+        </if>
+        <if test="userName!=null and userName!=''">
+            userName=#{userName},
+        </if>
+        <if test="password!=null and password!=''">
+            password=#{password},
+        </if>
+        <if test="sex!=null">
+            sex=#{sex},
+        </if>
+        <if test="identityCode!=null and identityCode!=''">
+            identityCode=#{identityCode},
+        </if>
+        <if test="email!=null and email!=''">
+            email=#{email},
+        </if>
+        <if test="mobile!=null and mobile!=''">
+            mobile=#{mobile},
+        </if>
+        <if test="type!=null">
+            type=#{type}
+        </if>
+        where id = #{id}
+    </update>
 
 
 

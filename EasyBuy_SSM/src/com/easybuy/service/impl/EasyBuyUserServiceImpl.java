@@ -40,4 +40,14 @@ public class EasyBuyUserServiceImpl implements EasyBuyUserService {
         return easyBuyUserMapper.save(eu);
     }
 
+    @Override
+    public int deleteUser(int id) {
+        return easyBuyUserMapper.deleteUser(id);
+    }
+
+    @Override
+    public int modifyUser(EasyBuyUser eu) {
+        return easyBuyUserMapper.modifyUser(eu);
+    }
+
 }

@@ -21,40 +21,34 @@ public class EasyBuyUserController {
     EasyBuyUserService easyBuyUserService;
 
     @RequestMapping("/toLogin")
-    public String toLogin(){
+    public String toLogin() {
         return "login";
     }
 
     @RequestMapping("/toReg")
-    public String toReg(){
+    public String toReg() {
         return "register";
     }
 
     @RequestMapping("/doReg")
-    public String doReg(EasyBuyUser eu)
-    {
+    public String doReg(EasyBuyUser eu) {
         CharacterEncodingFilter fd;
-        int r=easyBuyUserService.save(eu);
+        int r = easyBuyUserService.save(eu);
         return "redirect:toLogin";
 
     }
 
 
-
-
     @RequestMapping("/doLogin")
-    public String doLogin(EasyBuyUser easyBuyUser, HttpServletRequest request)
-    {
+    public String doLogin(EasyBuyUser easyBuyUser, HttpServletRequest request) {
         try {
-            EasyBuyUser eu=easyBuyUserService.login(easyBuyUser.getLoginName(),easyBuyUser.getPassword());
+            EasyBuyUser eu = easyBuyUserService.login(easyBuyUser.getLoginName(), easyBuyUser.getPassword());
 
-            if(eu==null)
-            {
-                request.setAttribute("MSG","用户名或者密码错误!");
+            if (eu == null) {
+                request.setAttribute("MSG", "用户名或者密码错误!");
                 return "login";
-            }else
-            {
-                request.getSession().setAttribute("EU",eu);
+            } else {
+                request.getSession().setAttribute("EU", eu);
             }
 
         } catch (Exception e) {
@@ -64,31 +58,22 @@ public class EasyBuyUserController {
     }
 
     @RequestMapping("toAdminUser")
-    public String toAdminUser(HttpServletRequest request, @RequestParam(value = "page",defaultValue = "1") int page,@RequestParam(value = "size",defaultValue = "7") int size)
-    {
+    public String toAdminUser(HttpServletRequest request, @RequestParam(value = "page", defaultValue = "1") int page, @RequestParam(value = "size", defaultValue = "7") int size) {
         try {
-            List list=easyBuyUserService.findAll(page,size);
-
-            int count=easyBuyUserService.count();
-
-
-            int pages=  (count%size==0)?count/size:(count/size)+1;
-
-
-            request.setAttribute("pages",pages);
-
-            request.setAttribute("list",list);
-            request.setAttribute("page",page);
-
-
-
+            List list = easyBuyUserService.findAll(page, size);
+            int count = easyBuyUserService.count();
+            int pages = (count % size == 0) ? count / size : (count / size) + 1;
+            request.setAttribute("pages", pages);
+            request.setAttribute("list", list);
+            request.setAttribute("page", page);
         } catch (Exception e) {
             e.printStackTrace();
         }
         return "manage/user";
-
-
     }
-
-
+    @RequestMapping("deleteUser")
+    public String deleteUser(int id){
+        int result = easyBuyUserService.deleteUser(id);
+        return "redirect:/toAdminUser";
+    }
 }
