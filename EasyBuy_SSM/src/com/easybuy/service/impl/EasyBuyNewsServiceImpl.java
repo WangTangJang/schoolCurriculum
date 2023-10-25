@@ -22,7 +22,12 @@ public class EasyBuyNewsServiceImpl implements EasyBuyNewsService {
     }
 
     @Override
-    public EasyBuyNews getEasyBuyNewById(int id) {
+    public EasyBuyNews getEasyBuyNewsById(int id) {
         return easyBuyNewsMapper.getEasyBuyNewsById(id);
+    }
+
+    @Override
+    public int count() {
+        return easyBuyNewsMapper.count();
     }
 }

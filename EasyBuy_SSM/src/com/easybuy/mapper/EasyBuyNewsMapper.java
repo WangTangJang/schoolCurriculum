@@ -11,6 +11,7 @@ public interface EasyBuyNewsMapper {
 
     public EasyBuyNews getEasyBuyNewsById(int id);
 
+    public int count();
 
 
 }

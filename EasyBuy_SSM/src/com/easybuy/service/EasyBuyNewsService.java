@@ -9,6 +9,7 @@ public interface EasyBuyNewsService {
 
     public List<EasyBuyNews> findNewsByPage(int page,int size);
 
-    public EasyBuyNews getEasyBuyNewById(int id);
+    public EasyBuyNews getEasyBuyNewsById(int id);
 
+    public int count();
 }

@@ -18,6 +18,6 @@
         <dt>留言管理</dt>
         <dd><a href="guestbook.html">留言管理</a></dd>
         <dt>新闻管理</dt>
-        <dd><em><a href="news-add.html">新增</a></em><a href="news.html">新闻管理</a></dd>
+        <dd><em><a href="news-add.html">新增</a></em><a href="toAdminNews">新闻管理</a></dd>
     </dl>
 </div>
