@@ -10,23 +10,21 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>后台管理 - 易买网</title>
-    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
     <script type="text/javascript" src="scripts/function-manage.js"></script>
 </head>
 <body>
 <script type="text/javascript">
-    function deleteUser(id) {
-        if(confirm("确定要删除吗")){
-            location.href='deleteUser?id='+id;
-        }else{
-            alert("就知道你不会删的！！！")
+    function delUser(id) {
+        if(confirm("确定要删除吗？"))
+        {
+            location.href='delUser?id='+id;
         }
     }
 </script>
-
-<%@include file="header.jsp" %>
+<%@include file="header.jsp"%>
 <div id="childNav">
     <div class="welcome wrap">
         管理员pillys您好，今天是2012-12-21，欢迎回到管理后台。
@@ -37,7 +35,7 @@
 </div>
 <div id="main" class="wrap">
     <div id="menu-mng" class="lefter">
-        <%@include file="left.jsp" %>
+        <%@include file="left.jsp"%>
     </div>
     <div class="main">
         <h2>用户管理</h2>
@@ -55,15 +53,11 @@
                     <tr>
                         <td class="first w4 c">${i.index+1}</td>
                         <td class="w1 c">${u.userName}</td>
-                        <c:if test="${u.sex==1}">
-                            <td class="w2 c">男</td>
-                        </c:if>
-                        <c:if test="${u.sex==0}">
-                            <td class="w2 c">女</td>
-                        </c:if>
+                        <c:if test="${u.sex==1}"><td class="w2 c">男</td></c:if>
+                        <c:if test="${u.sex==0}"><td class="w2 c">女</td></c:if>
                         <td>${u.email}</td>
                         <td class="w4 c">${u.mobile}</td>
-                        <td class="w1 c"><a href="user-modify.html">修改</a> <a href="javascript:deleteUser(${u.id});">删除</a></td>
+                        <td class="w1 c"><a href="toUpdate?id=${u.id}">修改</a> <a href="javascript:delUser(${u.id});">删除</a></td>
                     </tr>
                 </c:forEach>
                 <tr>
@@ -77,13 +71,24 @@
                                 <c:if test="${requestScope.page>1}">
                                     <li><a href="toAdminUser?page=${requestScope.page-1}">上一页</a></li>
                                 </c:if>
+
+
                                 <c:if test="${requestScope.page==requestScope.pages}">
                                     <li><a href="toAdminUser?page=${requestScope.page}">下一页</a></li>
                                 </c:if>
+
                                 <c:if test="${requestScope.page<requestScope.pages}">
                                     <li><a href="toAdminUser?page=${requestScope.page+1}">下一页</a></li>
                                 </c:if>
+
+
+
+
+
                                 <li><a href="toAdminUser?page=${requestScope.pages}">末页</a></li>
+
+
+
                             </ul>
                         </div>
                     </td>

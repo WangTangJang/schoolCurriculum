@@ -16,6 +16,11 @@
         select  * from easybuy_user where loginName=#{loginName} and password=#{password}
     </select>
 
+    <!--根据用户ID查询用户信息-->
+    <select id="getUserById" resultType="com.easybuy.pojo.EasyBuyUser">
+        select * from easybuy_user where id=#{id}
+    </select>
+
     <insert id="save" parameterType="com.easybuy.pojo.EasyBuyUser">
         insert into easybuy_user(loginName,userName,password,sex,identityCode,email,mobile)
         values(#{loginName},#{userName},#{password},#{sex},#{identityCode},#{email},#{mobile})
@@ -26,31 +31,34 @@
     </delete>
 
     <update id="modifyUser" parameterType="com.easybuy.pojo.EasyBuyUser">
-        update easybuy_user set
-        <if test="loginName!='' and loginName!=null">
-            loginName=#{loginName},
-        </if>
-        <if test="userName!=null and userName!=''">
-            userName=#{userName},
-        </if>
-        <if test="password!=null and password!=''">
-            password=#{password},
-        </if>
-        <if test="sex!=null">
-            sex=#{sex},
-        </if>
-        <if test="identityCode!=null and identityCode!=''">
-            identityCode=#{identityCode},
-        </if>
-        <if test="email!=null and email!=''">
-            email=#{email},
-        </if>
-        <if test="mobile!=null and mobile!=''">
-            mobile=#{mobile},
-        </if>
-        <if test="type!=null">
-            type=#{type}
-        </if>
+        update easybuy_user
+        <set>
+            <if test="loginName!='' and loginName!=null">
+                loginName=#{loginName},
+            </if>
+            <if test="userName!=null and userName!=''">
+                userName=#{userName},
+            </if>
+            <if test="password!=null and password!=''">
+                password=#{password},
+            </if>
+            <if test="sex!=null">
+                sex=#{sex},
+            </if>
+            <if test="identityCode!=null and identityCode!=''">
+                identityCode=#{identityCode},
+            </if>
+            <if test="email!=null and email!=''">
+                email=#{email},
+            </if>
+            <if test="mobile!=null and mobile!=''">
+                mobile=#{mobile},
+            </if>
+            <if test="type!=null">
+                type=#{type}
+            </if>
+        </set>
+
         where id = #{id}
     </update>
 

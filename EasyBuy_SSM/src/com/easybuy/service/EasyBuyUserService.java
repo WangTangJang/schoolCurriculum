@@ -39,6 +39,15 @@ public interface EasyBuyUserService {
      */
     public int save(EasyBuyUser eu);
 
+
+    /**
+     * 根据用户ID查询用户信息
+     * @param id
+     * @return
+     */
+    public EasyBuyUser getUserById(int id);
+
+
     /**
      * 通过id删除用户
      * @param id id值

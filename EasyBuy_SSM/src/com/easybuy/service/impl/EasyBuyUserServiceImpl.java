@@ -41,6 +41,11 @@ public class EasyBuyUserServiceImpl implements EasyBuyUserService {
     }
 
     @Override
+    public EasyBuyUser getUserById(int id) {
+        return easyBuyUserMapper.getUserById(id);
+    }
+
+    @Override
     public int deleteUser(int id) {
         return easyBuyUserMapper.deleteUser(id);
     }
