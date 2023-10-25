@@ -12,4 +12,11 @@ public interface EasyBuyNewsService {
     public EasyBuyNews getEasyBuyNewsById(int id);
 
     public int count();
+
+    public int save(EasyBuyNews en);
+
+    public int modify(EasyBuyNews en);
+
+    public int delete(int id);
+
 }

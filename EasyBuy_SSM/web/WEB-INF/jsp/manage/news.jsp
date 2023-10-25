@@ -46,7 +46,36 @@
                         <td class="w1 c"><a href="#">修改</a>&nbsp;<a href="#">删除</a></td>
                     </tr>
                 </c:forEach>
+                <tr>
+                    <td colspan="6">
+                        <div class="pager">
+                            <ul class="">
+                                <li><a href="toAdminNews?page=1">首页</a></li>
+                                <c:if test="${requestScope.page==1}">
+                                    <li><a href="toAdminNews?page=${requestScope.page}">上一页</a></li>
+                                </c:if>
+                                <c:if test="${requestScope.page>1}">
+                                    <li><a href="toAdminNews?page=${requestScope.page-1}">上一页</a></li>
+                                </c:if>
 
+
+                                <c:if test="${requestScope.page==requestScope.pages}">
+                                    <li><a href="toAdminNews?page=${requestScope.page}">下一页</a></li>
+                                </c:if>
+
+                                <c:if test="${requestScope.page<requestScope.pages}">
+                                    <li><a href="toAdminNews?page=${requestScope.page+1}">下一页</a></li>
+                                </c:if>
+
+
+                                <li><a href="toAdminNews?page=${requestScope.pages}">末页</a></li>
+
+
+
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
             </table>
         </div>
     </div>

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -49,5 +50,19 @@ public class EasyBuyNewsController {
         return "manage/news";
 
     }
+    /**
+     * 打开新闻添加页面
+     */
+    @RequestMapping("toNewsAdd")
+    public String toNewsAdd()
+    {
+        return "manage/news-add";
+    }
 
+    @RequestMapping("saveNews")
+    public String saveNews(EasyBuyNews easyBuyNews){
+        easyBuyNews.setCreateTime(new Date());
+        int r=easyBuyNewsService.save(easyBuyNews);
+        return "redirect:/toAdminNews";
+    }
 }

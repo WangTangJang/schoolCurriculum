@@ -13,5 +13,12 @@ public interface EasyBuyNewsMapper {
 
     public int count();
 
+    public int save(EasyBuyNews en);
+
+    public int modify(EasyBuyNews en);
+
+    public int delete(int id);
+
+
 
 }

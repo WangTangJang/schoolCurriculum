@@ -16,4 +16,22 @@
         select count(*) from easybuy_news
     </select>
 
+    <insert id="save" parameterType="com.easybuy.pojo.EasyBuyNews">
+        insert into easybuy_news (title,content,createTime) values(#{title},#{content},#{createTime})
+    </insert>
+
+    <update id="modify" parameterType="com.easybuy.pojo.EasyBuyNews">
+        update easybuy_news set
+        <if test="title!=null and title!=''">
+            title=#{title},
+        </if>
+        <if test="content!=null and content!=''">
+            content=#{content}
+        </if>
+        where id=#{id}
+    </update>
+    <delete id="delete">
+        delete from easybuy_news where id=#{id}
+    </delete>
+
 </mapper>

@@ -119,11 +119,15 @@ public class EasyBuyUserController {
         request.setAttribute("eu",eu);
         return "manage/user-modify";
     }
-    @RequestMapping("doAdminModify")
-    public String doAdminModify(EasyBuyUser eu){
-        int result = easyBuyUserService.modifyUser(eu);
+
+    @RequestMapping("/doAdminModify")
+    public String doAdminModify(EasyBuyUser eu)
+    {
+        int r=easyBuyUserService.modifyUser(eu);
+
         return "redirect:/toAdminUser";
     }
+
 
     @RequestMapping("delUser")
     public String delUser(int id)

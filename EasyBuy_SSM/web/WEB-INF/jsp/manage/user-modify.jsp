@@ -34,6 +34,7 @@
         <div class="manage">
             <form id="regForm" method="post" action="doAdminModify" onsubmit="return checkForm(this);">
                 <input type="hidden" name="id" value="${eu.id}"/>
+                <input type="hidden" name="type" value="0"/>
                 <table>
                     <tr>
                         <td class="field">用户名：</td>

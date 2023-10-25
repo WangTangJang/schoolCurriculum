@@ -30,4 +30,19 @@ public class EasyBuyNewsServiceImpl implements EasyBuyNewsService {
     public int count() {
         return easyBuyNewsMapper.count();
     }
+
+    @Override
+    public int save(EasyBuyNews en) {
+        return easyBuyNewsMapper.save(en);
+    }
+
+    @Override
+    public int modify(EasyBuyNews en) {
+        return easyBuyNewsMapper.modify(en);
+    }
+
+    @Override
+    public int delete(int id) {
+        return easyBuyNewsMapper.delete(id);
+    }
 }
