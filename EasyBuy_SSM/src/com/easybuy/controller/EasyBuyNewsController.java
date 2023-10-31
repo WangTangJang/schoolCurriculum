@@ -15,16 +15,26 @@ import java.util.List;
 @Controller
 public class EasyBuyNewsController {
 
+
     @Autowired
     EasyBuyNewsService easyBuyNewsService;
 
+    /**
+     * 获取通过id获取新闻
+     * @param id id值
+     * @param request 用于传递请求信息
+     * @return 一个新闻页面的地址
+     */
     @RequestMapping("getNewsById")
     public String getNewsById(int id,HttpServletRequest request)
     {
-        EasyBuyNews en=easyBuyNewsService.getEasyBuyNewsById(id);
-        request.setAttribute("en",en);
-        return "news-view";
+        // 获取查询出来的一个新闻实体
+        EasyBuyNews en=easyBuyNewsService.getEasyBuyNewsById(id);//想service层传递一个id值
+        request.setAttribute("en",en); // 将获取到的新闻实体放入请求消息中
+        return "news-view"; // 返回新闻详情页的地址
     }
+
+
     @RequestMapping("toAdminNews")
     public String toAdminNews(HttpServletRequest request, @RequestParam(value = "page",defaultValue = "1") int page, @RequestParam(value = "size",defaultValue = "7") int size)
     {
