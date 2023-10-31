@@ -22,6 +22,8 @@ public interface EasyBuyProductService {
      */
     public int countProductByCid(int cid);
 
+    public int countProduct();
+
     public int save(EasyBuyProduct easyBuyProduct);
 
     public int modify(EasyBuyProduct easyBuyProduct);

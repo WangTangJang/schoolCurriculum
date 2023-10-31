@@ -4,13 +4,18 @@ import com.easybuy.pojo.EasyBuyProduct;
 import com.easybuy.service.EasyBuyNewsService;
 import com.easybuy.service.EasyBuyProductService;
 import javafx.scene.chart.ValueAxis;
+import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.File;
+import java.util.Date;
 import java.util.List;
+import java.util.Random;
 
 @Controller
 public class EasyBuyProductController {
@@ -50,8 +55,67 @@ public class EasyBuyProductController {
     {
         List list=easyBuyProductService.findProductByPage(page,size);
 
+        int count=easyBuyProductService.countProduct();
+        /**
+         * 总页数
+         */
+        int pages=(count%size)>0?(count/size)+1:count/size;
+
+        request.setAttribute("pages",pages);
+        request.setAttribute("page",page);
         request.setAttribute("list",list);
         return "manage/product";
+    }
+
+    @RequestMapping("toAdminAddProduct")
+    public String toAdminAddProduct(){
+        return "manage/product-add";
+    }
+
+
+    @RequestMapping("doProductAdd")
+    public String doProductAdd(HttpServletRequest request,EasyBuyProduct ep, @RequestParam(value = "pic",required = false) MultipartFile attach){
+
+        String idPicPath = null;
+        //判断文件是否为空
+        if(!attach.isEmpty()) {
+            String path="D:\\apache-tomcat-8.5.9\\webapps\\jd\\";
+            String oldFileName = attach.getOriginalFilename();//原文件名
+            String prefix= FilenameUtils.getExtension(oldFileName);//原文件后缀
+            int filesize = 500000;
+            if(attach.getSize() >  filesize) {//上传大小不得超过 500k
+                request.setAttribute("uploadFileError", " * 上传大小不得超过 500k");
+                return "manage/product-add";
+            }else if(prefix.equalsIgnoreCase("jpg") || prefix.equalsIgnoreCase("png")
+                    || prefix.equalsIgnoreCase("jpeg") || prefix.equalsIgnoreCase("pneg")) {//上传图片格式不正确
+                Random r=new Random();
+                int num=r.nextInt(100000);
+                String fileName = System.currentTimeMillis() + num + "_Personal.jpg";
+                File targetFile = new File(path, fileName);
+                if (!targetFile.exists()) {
+                    targetFile.mkdirs();
+                }
+                //保存
+                try {
+                    attach.transferTo(targetFile);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    request.setAttribute("uploadFileError", " * 上传失败！");
+                    return "manage/product-add";
+                }
+                idPicPath = path+File.separator+fileName;
+                ep.setCreated(new Date());
+                ep.setStatus(1);
+                ep.setImage("http://127.0.0.1:9090/jd/"+fileName);
+            }
+            else{
+                request.setAttribute("uploadFileError", " * 上传图片格式不正确");
+                return "manage/product-add";
+            }
+        }
+        easyBuyProductService.save(ep);
+        return "redirect:/toAdminProduct";
+
     }
 
 }

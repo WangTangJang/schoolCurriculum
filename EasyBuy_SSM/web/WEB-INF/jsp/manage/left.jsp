@@ -12,7 +12,7 @@
         <dd><em><a href="toAdminReg">新增</a></em><a href="toAdminUser">用户管理</a></dd>
         <dt>商品信息</dt>
         <dd><em><a href="productClass-add.html">新增</a></em><a href="productClass.html">分类管理</a></dd>
-        <dd><em><a href="product-add.html">新增</a></em><a href="toAdminProduct">商品管理</a></dd>
+        <dd><em><a href="toAdminAddProduct">新增</a></em><a href="toAdminProduct">商品管理</a></dd>
         <dt>订单管理</dt>
         <dd><a href="order.html">订单管理</a></dd>
         <dt>留言管理</dt>

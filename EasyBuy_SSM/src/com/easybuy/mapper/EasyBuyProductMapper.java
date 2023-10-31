@@ -29,16 +29,12 @@ public interface EasyBuyProductMapper {
     public int countProductByCid(int cid);
 
 
+    public int countProduct();
 
     public int save(EasyBuyProduct easyBuyProduct);
 
     public int modify(EasyBuyProduct easyBuyProduct);
 
     public int delete(int id);
-
-
-
-
-
 
 }

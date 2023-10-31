@@ -37,6 +37,11 @@ public class EasyBuyProductServiceImpl implements EasyBuyProductService {
     }
 
     @Override
+    public int countProduct() {
+        return easyBuyProductMapper.countProduct();
+    }
+
+    @Override
     public int save(EasyBuyProduct easyBuyProduct) {
         return easyBuyProductMapper.save(easyBuyProduct);
     }

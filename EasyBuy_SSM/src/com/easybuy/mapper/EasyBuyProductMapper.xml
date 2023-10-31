@@ -21,16 +21,50 @@
         select count(*) from easybuy_product where cid=#{cid}
     </select>
 
-    <select id="save" resultType="int">
-
+    <select id="countProduct" resultType="int">
+        select count(*) from easybuy_product
     </select>
 
-    <select id="modify" resultType="int">
 
-    </select>
+    <insert id="save" parameterType="com.easybuy.pojo.EasyBuyProduct">
+      insert into easybuy_product(title,sell_point,price,num,barcode,image,cid,status,created)
+        values(#{title},#{sell_point},#{price},#{num},#{barcode},#{image},#{cid},#{status},#{created})
+    </insert>
 
-    <select id="delete" resultType="int">
+    <update id="modify" parameterType="com.easybuy.pojo.EasyBuyProduct">
+        update easybuy_product set
+        <if test="title!=null and title!=''">
+            title=#{title},
+        </if>
+        <if test="sell_point!=null and sell_point!=''">
+            sell_point=#{sell_point},
+        </if>
+        <if test="price!=null">
+            price=#{price},
+        </if>
+        <if test="num!=null">
+            num=#{num},
+        </if>
+        <if test="barcode!=null and barcode!=''">
+            barcode=#{barcode},
+        </if>
+        <if test="image!=null and image!=''">
+            image=#{image},
+        </if>
+        <if test="cid!=null">
+            cid=#{cid},
+        </if>
+        <if test="status!=null">
+            status=#{status},
+        </if>
+        <if test="updated!=null">
+            updated=#{updated}
+        </if>
+        where id=#{id}
+    </update>
 
-    </select>
+    <delete id="delete" parameterType="int">
+        delete from easybuy_product where id=#{id}
+    </delete>
 
 </mapper>
