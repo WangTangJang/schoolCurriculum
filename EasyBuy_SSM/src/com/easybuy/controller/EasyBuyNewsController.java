@@ -34,12 +34,18 @@ public class EasyBuyNewsController {
         return "news-view"; // 返回新闻详情页的地址
     }
 
-
+    /**
+     * 去到新闻的管理页面
+     * @param request 请求消息
+     * @param page 页面数--- 第几页的
+     * @param size 每一个页面能有的数量
+     * @return 去到商品详情页的地址
+     */
     @RequestMapping("toAdminNews")
     public String toAdminNews(HttpServletRequest request, @RequestParam(value = "page",defaultValue = "1") int page, @RequestParam(value = "size",defaultValue = "7") int size)
     {
         try {
-            List list=easyBuyNewsService.findNewsByPage(page,size);
+            List<EasyBuyNews> list=easyBuyNewsService.findNewsByPage(page,size);
 
             int count=easyBuyNewsService.count();
 

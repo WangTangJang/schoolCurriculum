@@ -256,7 +256,7 @@
       <workItem from="1698738390609" duration="287000" />
       <workItem from="1698738690314" duration="386000" />
       <workItem from="1698739452990" duration="178000" />
-      <workItem from="1698740651849" duration="3305000" />
+      <workItem from="1698740651849" duration="3427000" />
     </task>
     <task id="LOCAL-00001" summary="查询商品方式+1">
       <created>1697590414035</created>
@@ -314,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698740966467</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="添加注释中">
+      <created>1698744109399</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1698744109399</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,9 +353,14 @@
     <MESSAGE value="实现用户信息修改." />
     <MESSAGE value="添加商品管理页面" />
     <MESSAGE value="增加一个文件上传的功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加一个文件上传的功能" />
+    <MESSAGE value="添加注释中" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加注释中" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="586" y="198" key="#Inspections" timestamp="1698744194334">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="586" y="198" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1698744194334" />
     <state x="842" y="382" key="#Notifications" timestamp="1698137939813">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -377,10 +389,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="545" y="441" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1697610831090" />
-    <state x="766" y="21" key="CommitChangelistDialog2" timestamp="1698740965877">
+    <state x="766" y="21" key="CommitChangelistDialog2" timestamp="1698744109001">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="766" y="21" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1698740965877" />
+    <state x="766" y="21" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1698744109001" />
     <state x="877" y="264" key="FileChooserDialogImpl" timestamp="1698741260131">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
