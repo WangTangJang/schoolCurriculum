@@ -25,17 +25,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11ffcae2-409c-47f2-91cf-261e004c6885" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/EasyBuy_SSM/web/WEB-INF/jsp/manage/news-add.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/EasyBuyProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EasyBuy_SSM/web/WEB-INF/jsp/manage/product.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/controller/EasyBuyNewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/controller/EasyBuyNewsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/controller/EasyBuyUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/controller/EasyBuyUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/mapper/EasyBuyNewsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/mapper/EasyBuyNewsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/mapper/EasyBuyNewsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/mapper/EasyBuyNewsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/service/EasyBuyNewsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/service/EasyBuyNewsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/service/impl/EasyBuyNewsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/service/impl/EasyBuyNewsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/controller/EasyBuyProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/controller/EasyBuyProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/mapper/EasyBuyProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/mapper/EasyBuyProductMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/mapper/EasyBuyProductMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/mapper/EasyBuyProductMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/service/EasyBuyProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/service/EasyBuyProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/service/impl/EasyBuyProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/service/impl/EasyBuyProductServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/web/WEB-INF/jsp/manage/left.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/EasyBuy_SSM/web/WEB-INF/jsp/manage/left.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/web/WEB-INF/jsp/manage/news.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/EasyBuy_SSM/web/WEB-INF/jsp/manage/news.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/web/WEB-INF/jsp/manage/user-modify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/EasyBuy_SSM/web/WEB-INF/jsp/manage/user-modify.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +70,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/EasyBuy_SSM/web/WEB-INF/jsp/manage" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/controller" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.35172415" />
@@ -80,14 +78,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\IdeaProjects\schoolCurriculum\EasyBuy_SSM\web\WEB-INF\jsp\manage" />
       <recent name="C:\Users\Administrator\IdeaProjects\schoolCurriculum\EasyBuy_SSM\src\com\easybuy\controller" />
-      <recent name="C:\Users\Administrator\IdeaProjects\schoolCurriculum\EasyBuy_SSM\src\com\easybuy\service\impl" />
-      <recent name="C:\Users\Administrator\IdeaProjects\schoolCurriculum\EasyBuy_SSM\src\com\easybuy\service" />
+      <recent name="C:\Users\Administrator\IdeaProjects\schoolCurriculum\EasyBuy_SSM\web\WEB-INF\jsp\manage" />
+      <recent name="C:\Users\Administrator\IdeaProjects\schoolCurriculum\EasyBuy_SSM\src\com\easybuy" />
       <recent name="C:\Users\Administrator\IdeaProjects\schoolCurriculum\EasyBuy_SSM\src\com\easybuy\mapper" />
+      <recent name="C:\Users\Administrator\IdeaProjects\schoolCurriculum\EasyBuy_SSM\src\com\easybuy\service\impl" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.15">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.151">
     <configuration name="Demo.demo" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="EasyBuy_SSM" />
       <extension name="coverage">
@@ -136,7 +134,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 8.5.15" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.15" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 8.5.151" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.151" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER" value="false" />
       <deployment>
         <artifact name="EasyBuy_SSM">
@@ -212,7 +210,7 @@
       <item itemvalue="JUnit.Demo.demo" />
       <item itemvalue="JUnit.Demo.demo2" />
       <item itemvalue="JUnit.Demo.demo3" />
-      <item itemvalue="Tomcat Server.Tomcat 8.5.15" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.151" />
     </list>
     <recent_temporary>
       <list>
@@ -250,6 +248,10 @@
       <workItem from="1698214217727" duration="271000" />
       <workItem from="1698214500195" duration="482000" />
       <workItem from="1698214995824" duration="4515000" />
+      <workItem from="1698733952895" duration="161000" />
+      <workItem from="1698734122095" duration="1089000" />
+      <workItem from="1698735232063" duration="10000" />
+      <workItem from="1698736352655" duration="196000" />
     </task>
     <task id="LOCAL-00001" summary="查询商品方式+1">
       <created>1697590414035</created>
@@ -330,22 +332,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="842" y="382" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1698137939813" />
-    <state x="873" y="399" key="#Tomcat_Server" timestamp="1698215643483">
+    <state x="873" y="399" key="#Tomcat_Server" timestamp="1698736480160">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="873" y="399" key="#Tomcat_Server/0.0.1920.1040@0.0.1920.1040" timestamp="1698215643483" />
-    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1698215650317">
+    <state x="873" y="399" key="#Tomcat_Server/0.0.1920.1040@0.0.1920.1040" timestamp="1698736480160" />
+    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1698736482861">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1698215650317" />
+    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1698736482861" />
     <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1698138818557">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1698138818557" />
-    <state x="542" y="140" width="838" height="764" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1698215646011">
+    <state x="542" y="140" width="838" height="764" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1698736481151">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="542" y="140" width="838" height="764" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1920.1040@0.0.1920.1040" timestamp="1698215646011" />
+    <state x="542" y="140" width="838" height="764" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1920.1040@0.0.1920.1040" timestamp="1698736481151" />
     <state x="811" y="300" width="718" height="579" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1698133749727">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -358,10 +360,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="766" y="21" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1698198873490" />
-    <state x="877" y="264" key="FileChooserDialogImpl" timestamp="1698215642707">
+    <state x="877" y="264" key="FileChooserDialogImpl" timestamp="1698736479412">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="877" y="264" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1698215642707" />
+    <state x="877" y="264" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1698736479412" />
     <state width="1293" height="296" key="GridCell.Tab.0.bottom" timestamp="1698219119918">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -410,10 +412,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1293" height="296" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1698219119824" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1698215034746">
+    <state x="461" y="164" key="SettingsEditor" timestamp="1698734857353">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1698215034746" />
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1698734857353" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1698201251339">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -422,10 +424,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="716" y="364" key="cloudConfig.PluginsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1698214972419" />
-    <state x="823" y="364" key="cloudConfig.SelfSettingsDialog" timestamp="1698214761394">
+    <state x="823" y="364" key="cloudConfig.SelfSettingsDialog" timestamp="1698734720176">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="823" y="364" key="cloudConfig.SelfSettingsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1698214761394" />
+    <state x="823" y="364" key="cloudConfig.SelfSettingsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1698734720176" />
     <state x="721" y="393" width="628" height="547" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1698214482433">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

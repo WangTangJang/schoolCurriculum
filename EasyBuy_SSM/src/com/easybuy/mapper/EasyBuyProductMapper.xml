@@ -7,13 +7,30 @@
     <select id="findProductByPage" resultType="com.easybuy.pojo.EasyBuyProduct">
         select * from easybuy_product  order by id desc limit #{start},#{end}
     </select>
-    <select id="findById" resultType="com.easybuy.pojo.EasyBuyProduct">
-        select * from easybuy_product where id = #{id}
+
+    <select id="findProductById" resultType="com.easybuy.pojo.EasyBuyProduct">
+        select * from easybuy_product where id=#{id}
     </select>
-    <select id="findProductByCid" resultType="com.easybuy.pojo.EasyBuyProduct">
-        select * from easybuy_product where cid = #{cid} limit #{start}, #{end}
+
+    <!--根据商品分类ID，查询商品信息-->
+    <select id="findProductBycid" resultType="com.easybuy.pojo.EasyBuyProduct">
+        select * from easybuy_product where cid=#{cid} limit #{start},#{end}
     </select>
+    
     <select id="countProductByCid" resultType="int">
-        select count(*) from easybuy_product where cid = #{cid}
+        select count(*) from easybuy_product where cid=#{cid}
     </select>
+
+    <select id="save" resultType="int">
+
+    </select>
+
+    <select id="modify" resultType="int">
+
+    </select>
+
+    <select id="delete" resultType="int">
+
+    </select>
+
 </mapper>

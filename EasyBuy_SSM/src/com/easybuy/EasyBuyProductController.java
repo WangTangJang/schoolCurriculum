@@ -1,4 +1,4 @@
-package com.easybuy.controller;
+package com.easybuy;
 
 import com.easybuy.pojo.EasyBuyProduct;
 import com.easybuy.service.EasyBuyNewsService;

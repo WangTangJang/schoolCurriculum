@@ -15,22 +15,40 @@ public class EasyBuyProductServiceImpl implements EasyBuyProductService {
     EasyBuyProductMapper easyBuyProductMapper;
 
     @Override
-    public List<EasyBuyProduct> findProductByPage(int page, int size) {
+    public List findProductByPage(int page, int size) {
         return easyBuyProductMapper.findProductByPage((page-1)*size,size);
     }
 
     @Override
-    public EasyBuyProduct findById(int id) {
-        return easyBuyProductMapper.findById(id);
+    public EasyBuyProduct findProductById(int id) {
+        return easyBuyProductMapper.findProductById(id);
     }
-
+    /**
+     * 根据商品分类ID，查询商品信息
+     */
     @Override
-    public List<EasyBuyProduct> findProductByCid(int cid, int page, int size) {
-        return easyBuyProductMapper.findProductByCid(cid ,(page-1)*size ,size);
+    public List<EasyBuyProduct> findProductBycid(int cid, int page, int size) {
+        return easyBuyProductMapper.findProductBycid(cid,(page-1)*size,size);
     }
 
     @Override
     public int countProductByCid(int cid) {
         return easyBuyProductMapper.countProductByCid(cid);
     }
+
+    @Override
+    public int save(EasyBuyProduct easyBuyProduct) {
+        return easyBuyProductMapper.save(easyBuyProduct);
+    }
+
+    @Override
+    public int modify(EasyBuyProduct easyBuyProduct) {
+        return easyBuyProductMapper.modify(easyBuyProduct);
+    }
+
+    @Override
+    public int delete(int id) {
+        return easyBuyProductMapper.delete(id);
+    }
+
 }
