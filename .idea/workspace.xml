@@ -25,8 +25,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11ffcae2-409c-47f2-91cf-261e004c6885" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EasyBuy_SSM/web/WEB-INF/jsp/manage/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EasyBuy_SSM/web/WEB-INF/jsp/manage/product-list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EasyBuy_SSM/web/WEB-INF/jsp/manage/product-modify.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EasyBuy_SSM/web/WEB-INF/jsp/manage/product-view.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/controller/EasyBuyNewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/controller/EasyBuyNewsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/EasyBuyProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/controller/EasyBuyProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/controller/EasyBuyProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schoolCurriculum.iml" beforeDir="false" afterPath="$PROJECT_DIR$/schoolCurriculum.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +58,13 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="2WuhSW52RqSrXjIXT4LacNkEZAk" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -61,29 +76,30 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/EasyBuy_SSM/web/WEB-INF/jsp/manage" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/EasyBuy_SSM/src/com/easybuy/controller" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.35172415" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\IdeaProjects\schoolCurriculum\EasyBuy_SSM\web\WEB-INF\jsp\manage" />
-      <recent name="C:\Users\Administrator\IdeaProjects\schoolCurriculum\EasyBuy_SSM\src" />
-      <recent name="C:\Users\Administrator\IdeaProjects\schoolCurriculum\EasyBuy_SSM\src\com\easybuy" />
-      <recent name="C:\Users\Administrator\IdeaProjects\schoolCurriculum\EasyBuy_SSM\src\com\easybuy\controller" />
-      <recent name="C:\Users\Administrator\IdeaProjects\schoolCurriculum" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\IdeaProjects\schoolCurriculum\EasyBuy_SSM\src\com\easybuy\service" />
       <recent name="C:\Users\Administrator\IdeaProjects\schoolCurriculum\EasyBuy_SSM\src\com\easybuy\mapper" />
       <recent name="C:\Users\Administrator\IdeaProjects\schoolCurriculum\EasyBuy_SSM\src\com\easybuy\controller" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\IdeaProjects\schoolCurriculum\EasyBuy_SSM\src\com\easybuy\controller" />
+      <recent name="C:\Users\Administrator\IdeaProjects\schoolCurriculum\EasyBuy_SSM\web\WEB-INF\jsp\manage" />
+      <recent name="C:\Users\Administrator\IdeaProjects\schoolCurriculum\EasyBuy_SSM\src" />
+      <recent name="C:\Users\Administrator\IdeaProjects\schoolCurriculum\EasyBuy_SSM\src\com\easybuy" />
+      <recent name="C:\Users\Administrator\IdeaProjects\schoolCurriculum" />
+    </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.151">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.15">
     <configuration name="Demo.demo" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="EasyBuy_SSM" />
       <extension name="coverage">
@@ -132,9 +148,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 8.5.151" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.151" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 8.5.15" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.15" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER" value="false" />
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8082/EasyBuy_SSM/" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/EasyBuy_SSM/" />
       <deployment>
         <artifact name="EasyBuy_SSM">
           <settings>
@@ -144,7 +160,6 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_schoolCurriculum" />
-        <option name="HTTP_PORT" value="8082" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -210,7 +225,7 @@
       <item itemvalue="JUnit.Demo.demo" />
       <item itemvalue="JUnit.Demo.demo2" />
       <item itemvalue="JUnit.Demo.demo3" />
-      <item itemvalue="Tomcat Server.Tomcat 8.5.151" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.15" />
     </list>
     <recent_temporary>
       <list>
@@ -257,6 +272,11 @@
       <workItem from="1698738690314" duration="386000" />
       <workItem from="1698739452990" duration="178000" />
       <workItem from="1698740651849" duration="3427000" />
+      <workItem from="1698798164240" duration="560000" />
+      <workItem from="1698798739679" duration="1240000" />
+      <workItem from="1698800064756" duration="403000" />
+      <workItem from="1698800480307" duration="2242000" />
+      <workItem from="1698807251615" duration="23000" />
     </task>
     <task id="LOCAL-00001" summary="查询商品方式+1">
       <created>1697590414035</created>
@@ -357,6 +377,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="添加注释中" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="832" y="418" width="586" height="202" key="#Custom_Plugin_Repositories" timestamp="1698800582501">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="832" y="418" width="586" height="202" key="#Custom_Plugin_Repositories/0.0.1920.1040@0.0.1920.1040" timestamp="1698800582501" />
+    <state x="731" y="237" key="#HTTP_Proxy" timestamp="1698800573937">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="731" y="237" key="#HTTP_Proxy/0.0.1920.1040@0.0.1920.1040" timestamp="1698800573937" />
     <state x="586" y="198" key="#Inspections" timestamp="1698744194334">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -365,22 +393,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="842" y="382" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1698137939813" />
-    <state x="873" y="399" key="#Tomcat_Server" timestamp="1698736480160">
+    <state x="873" y="399" key="#Tomcat_Server" timestamp="1698798794498">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="873" y="399" key="#Tomcat_Server/0.0.1920.1040@0.0.1920.1040" timestamp="1698736480160" />
-    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1698743306922">
+    <state x="873" y="399" key="#Tomcat_Server/0.0.1920.1040@0.0.1920.1040" timestamp="1698798794498" />
+    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1698798955032">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1698743306922" />
+    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1698798955032" />
     <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1698138818557">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1698138818557" />
-    <state x="542" y="140" width="838" height="764" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1698736481151">
+    <state x="542" y="140" width="838" height="764" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1698798795369">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="542" y="140" width="838" height="764" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1920.1040@0.0.1920.1040" timestamp="1698736481151" />
+    <state x="542" y="140" width="838" height="764" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1920.1040@0.0.1920.1040" timestamp="1698798795369" />
     <state x="811" y="300" width="718" height="579" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1698133749727">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -393,62 +421,62 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="766" y="21" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1698744109001" />
-    <state x="877" y="264" key="FileChooserDialogImpl" timestamp="1698741260131">
+    <state x="877" y="264" key="FileChooserDialogImpl" timestamp="1698802898540">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="877" y="264" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1698741260131" />
-    <state width="1293" height="397" key="GridCell.Tab.0.bottom" timestamp="1698743226362">
+    <state x="877" y="264" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1698802898540" />
+    <state width="1293" height="282" key="GridCell.Tab.0.bottom" timestamp="1698802900255">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="397" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1698743226362" />
-    <state width="1293" height="397" key="GridCell.Tab.0.center" timestamp="1698743226362">
+    <state width="1293" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1698802900255" />
+    <state width="1293" height="282" key="GridCell.Tab.0.center" timestamp="1698802900255">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="397" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1698743226362" />
-    <state width="1293" height="397" key="GridCell.Tab.0.left" timestamp="1698743226362">
+    <state width="1293" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1698802900255" />
+    <state width="1293" height="282" key="GridCell.Tab.0.left" timestamp="1698802900255">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="397" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1698743226362" />
-    <state width="1293" height="397" key="GridCell.Tab.0.right" timestamp="1698743226362">
+    <state width="1293" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1698802900255" />
+    <state width="1293" height="282" key="GridCell.Tab.0.right" timestamp="1698802900255">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="397" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1698743226362" />
-    <state width="1293" height="397" key="GridCell.Tab.1.bottom" timestamp="1698743226276">
+    <state width="1293" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1698802900255" />
+    <state width="1293" height="282" key="GridCell.Tab.1.bottom" timestamp="1698802900255">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="397" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1698743226276" />
-    <state width="1293" height="397" key="GridCell.Tab.1.center" timestamp="1698743226276">
+    <state width="1293" height="282" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1698802900255" />
+    <state width="1293" height="282" key="GridCell.Tab.1.center" timestamp="1698802900255">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="397" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1698743226276" />
-    <state width="1293" height="397" key="GridCell.Tab.1.left" timestamp="1698743226276">
+    <state width="1293" height="282" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1698802900255" />
+    <state width="1293" height="282" key="GridCell.Tab.1.left" timestamp="1698802900255">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="397" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1698743226276" />
-    <state width="1293" height="397" key="GridCell.Tab.1.right" timestamp="1698743226276">
+    <state width="1293" height="282" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1698802900255" />
+    <state width="1293" height="282" key="GridCell.Tab.1.right" timestamp="1698802900255">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="397" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1698743226276" />
-    <state width="1293" height="397" key="GridCell.Tab.2.bottom" timestamp="1698743226276">
+    <state width="1293" height="282" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1698802900255" />
+    <state width="1293" height="282" key="GridCell.Tab.2.bottom" timestamp="1698802900255">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="397" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1698743226276" />
-    <state width="1293" height="397" key="GridCell.Tab.2.center" timestamp="1698743226276">
+    <state width="1293" height="282" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1698802900255" />
+    <state width="1293" height="282" key="GridCell.Tab.2.center" timestamp="1698802900255">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="397" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1698743226276" />
-    <state width="1293" height="397" key="GridCell.Tab.2.left" timestamp="1698743226276">
+    <state width="1293" height="282" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1698802900255" />
+    <state width="1293" height="282" key="GridCell.Tab.2.left" timestamp="1698802900255">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="397" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1698743226276" />
-    <state width="1293" height="397" key="GridCell.Tab.2.right" timestamp="1698743226276">
+    <state width="1293" height="282" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1698802900255" />
+    <state width="1293" height="282" key="GridCell.Tab.2.right" timestamp="1698802900255">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="397" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1698743226276" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1698741283307">
+    <state width="1293" height="282" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1698802900255" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1698802892996">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1698741283307" />
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1698802892996" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1698740972763">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -457,14 +485,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="716" y="364" key="cloudConfig.PluginsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1698214972419" />
-    <state x="823" y="364" key="cloudConfig.SelfSettingsDialog" timestamp="1698734720176">
+    <state x="823" y="364" width="708" height="312" key="cloudConfig.SelfSettingsDialog" timestamp="1698800533973">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="823" y="364" key="cloudConfig.SelfSettingsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1698734720176" />
-    <state x="721" y="393" width="628" height="547" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1698741142475">
+    <state x="823" y="364" width="708" height="312" key="cloudConfig.SelfSettingsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1698800533973" />
+    <state x="721" y="393" width="628" height="547" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1698800662219">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="721" y="393" width="628" height="547" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1698741142475" />
+    <state x="721" y="393" width="628" height="547" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1698800662219" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1697598676710">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
